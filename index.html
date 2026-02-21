@@ -43,13 +43,6 @@
       background:#ffffff;
     }
 
-    /* Optional: if you later want a real concrete texture, add a file (e.g., concrete.jpg)
-       and use the class below.
-    body.has-concrete::before{
-      background: url("concrete.jpg") center/cover no-repeat;
-    }
-    */
-
     a{color:inherit}
 
     .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
@@ -99,14 +92,18 @@
       .grid-2,.grid-3{grid-template-columns:1fr;}
     }
 
-    .card{
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      background: rgba(235,235,235,1);
-      box-shadow:var(--shadow);
-      padding:18px;
-      backdrop-filter: blur(8px);
-    }
+   .card {
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  padding: 18px;
+  background: 
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("concrete.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
     .h2{font-size:1.25rem; margin:0 0 10px;}
     .muted{color:var(--muted)}
     .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
