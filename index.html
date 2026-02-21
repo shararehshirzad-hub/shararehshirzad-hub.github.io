@@ -3,300 +3,297 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sustainable Construction Materials Lab | Dr. Sharareh Shirzad</title>
-  <meta name="description" content="Sustainable Construction Materials Lab at Appalachian State University: biochar-enhanced concrete, self-sensing cementitious composites, and biochar/bio-oil-modified asphalt for low-carbon, resilient infrastructure." />
+  <title>Dr. Sharareh Shirzad | Research</title>
+  <meta name="description" content="Research website for Dr. Sharareh Shirzad — sustainable and multifunctional infrastructure materials." />
+
+  <!--
+    Single‑file starter site.
+    ✅ Easy to edit
+    ✅ Works on GitHub Pages as-is
+    ✅ No build tools required
+
+    IMAGES NOT SHOWING?
+    - Put images in /assets/ and reference them like: assets/yourphoto.jpg
+    - GitHub Pages is case-sensitive (Photo.jpg != photo.jpg)
+    - If you used Google Drive/OneDrive “share links”, they won’t render as images here.
+      Upload the images into the repo instead.
+
+    Optional concrete background image:
+    - Add: assets/concrete.jpg
+    - Then enable it by adding:  document.body.classList.add('has-concrete');  (see script at bottom)
+  -->
 
   <style>
     :root{
-      --bg:#0b1020; --card:#111a33; --text:#eaf0ff; --muted:#b7c2e1;
-      --accent:#7aa2ff; --accent2:#6ee7b7; --border:rgba(255,255,255,.10);
-      --max:1040px;
+      --bg:#0b1220;
+      --panel:rgba(15,27,51,.70);
+      --text:#e8eefc;
+      --muted:#b8c6e6;
+      --accent:#7cc4ff;
+      --accent2:#7dffcf;
+      --border:rgba(255,255,255,.14);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
     }
+
     *{box-sizing:border-box}
+    html,body{height:100%}
+
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(122,162,255,.25), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(110,231,183,.18), transparent 55%),
-        var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color:var(--text);
+      background: var(--bg);
+      line-height:1.6;
+      overflow-x:hidden;
     }
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{
-      position:sticky;top:0;z-index:10;
-      backdrop-filter:saturate(120%) blur(10px);
-      background:rgba(11,16,32,.65);
-      border-bottom:1px solid var(--border);
+
+    /* Concrete-like background (no image required). */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.78), rgba(11,18,32,.92)),
+        radial-gradient(1200px 800px at 10% 0%, rgba(124,196,255,.18), transparent 55%),
+        radial-gradient(900px 700px at 90% 10%, rgba(125,255,207,.12), transparent 60%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0 1px, transparent 1px 6px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 1px, transparent 1px 7px);
+      background-size: cover;
+      background-position: center;
+      background-repeat:no-repeat;
+      filter: contrast(1.05);
     }
-    .wrap{max-width:var(--max);margin:0 auto;padding:18px}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{font-weight:700;letter-spacing:.2px}
-    .navlinks{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;color:var(--muted)}
-    .navlinks a{color:var(--muted)}
-    .hero{padding:34px 0 8px}
-    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:start}
-    @media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
-    .kicker{color:var(--accent2);font-weight:600;font-size:14px;letter-spacing:.3px}
-    h1{margin:10px 0 8px;font-size:36px;line-height:1.08}
-    h2{margin:26px 0 12px;font-size:22px}
-    h3{margin:0 0 8px;font-size:16px}
-    p{color:var(--muted);line-height:1.7}
-    .small{font-size:14px}
+
+    /* Optional real concrete image overlay */
+    body.has-concrete::before{
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.78), rgba(11,18,32,.92)),
+        url("assets/concrete.jpg") center/cover no-repeat;
+    }
+
+    a{color:inherit}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
+
+    /* Header styled like your sketch: centered title + tagline + tab row */
+    .site-header{padding:22px 0 10px;}
+    .hero-card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      background: linear-gradient(180deg, rgba(15,27,51,.80), rgba(15,27,51,.55));
+      overflow:hidden;
+      backdrop-filter: blur(8px);
+    }
+    .hero-inner{padding:26px 22px 10px;}
+    .hero-text{max-width: 900px; margin: 0 auto; text-align:center;}
+    .kicker{margin:0 0 8px; color:var(--muted); letter-spacing:.14em; text-transform:uppercase; font-size:.78rem;}
+    .site-title{margin:0; font-size:clamp(1.8rem, 3.2vw, 2.6rem); letter-spacing:.2px;}
+    .tagline{margin:10px 0 0; color:var(--muted); font-size:1.02rem;}
+
+    .tabs{
+      display:flex;
+      gap:8px;
+      padding:12px;
+      border-top:1px solid var(--border);
+      justify-content:center;
+      flex-wrap:wrap;
+      background: rgba(0,0,0,.12);
+    }
+    .tab{
+      text-decoration:none;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      color:var(--text);
+      font-size:.95rem;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .tab:hover{transform: translateY(-1px); background: rgba(124,196,255,.10); border-color: rgba(124,196,255,.35);}
+
+    /* Sections */
+    section{padding:22px 0;}
+    .grid{display:grid; gap:18px;}
+    .grid-2{grid-template-columns: 1.1fr .9fr;}
+    .grid-3{grid-template-columns: repeat(3, minmax(0, 1fr));}
+    @media (max-width: 920px){
+      .grid-2,.grid-3{grid-template-columns:1fr;}
+    }
+
     .card{
-      background:linear-gradient(180deg, rgba(17,26,51,.9), rgba(17,26,51,.65));
       border:1px solid var(--border);
-      border-radius:18px;
+      border-radius:var(--radius);
+      background: rgba(15,27,51,.60);
+      box-shadow:var(--shadow);
       padding:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      backdrop-filter: blur(8px);
     }
-    .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .btn{
-      display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid var(--border);
-      background:rgba(255,255,255,.04);color:var(--text);font-size:14px
-    }
-    .btn.primary{background:rgba(122,162,255,.18);border-color:rgba(122,162,255,.35)}
-    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .pill{
-      font-size:13px;color:var(--text);
-      border:1px solid var(--border);
-      padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.03)
-    }
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
-    .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}
+    .h2{font-size:1.25rem; margin:0 0 10px;}
     .muted{color:var(--muted)}
-    .img{
-      width:100%;
-      border-radius:14px;
-      border:1px solid var(--border);
-      display:block;
-      margin-top:10px;
-    }
-    .footer{padding:34px 0;color:rgba(234,240,255,.65);font-size:13px}
-    .note{font-size:13px;color:rgba(234,240,255,.65);line-height:1.6}
-    code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px;border:1px solid rgba(255,255,255,.10)}
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+    .pill{border:1px solid var(--border); border-radius:999px; padding:8px 10px; font-size:.92rem; background: rgba(255,255,255,.03)}
+
+    /* Images */
+    img{max-width:100%; height:auto; display:block;}
+    .img{width:100%; border-radius:14px; border:1px solid var(--border); background: rgba(255,255,255,.04); object-fit:cover;}
+    .img-missing{filter: grayscale(1); opacity:.85;}
+
+    /* People cards */
+    .person{display:flex; gap:14px; align-items:flex-start;}
+    .avatar{width:68px; height:68px; border-radius:16px; flex:0 0 auto;}
+    .person h3{margin:0 0 2px; font-size:1.02rem;}
+    .person p{margin:0; color:var(--muted); font-size:.95rem;}
+
+    /* Footer */
+    footer{padding:30px 0 50px; color:var(--muted); font-size:.95rem;}
+    .small{font-size:.9rem}
   </style>
 </head>
 
 <body>
-  <header>
+  <header class="site-header" id="top">
     <div class="wrap">
-      <nav>
-        <div class="brand">Sustainable Construction Materials Lab</div>
-        <div class="navlinks">
-          <a href="#research">Research</a>
-          <a href="#people">People</a>
-          <a href="#publications">Publications</a>
-          <a href="#presentations">Presentations</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+      <div class="hero-card" role="banner" aria-label="Site header">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="kicker">Sustainable • Circular • Multifunctional Materials Lab</p>
+            <!-- Centered heading (per your sketch) -->
+            <h1 class="site-title">Materials Lab</h1>
+            <p class="tagline">Low‑carbon infrastructure materials • High performance • Sensing</p>
+          </div>
         </div>
-      </nav>
+        <!-- Tabs row (per your sketch) -->
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab" href="#research">Research</a>
+          <a class="tab" href="#people">People</a>
+          <a class="tab" href="#publications">Publications</a>
+          <a class="tab" href="#press">Press</a>
+          <a class="tab" href="#gallery">Gallery</a>
+          <a class="tab" href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="kicker">Low-carbon • High-performance • Smart infrastructure</div>
-          <h1>Sustainable Construction Materials Lab</h1>
 
-          <p class="small">
-            The lab develops low-carbon, high-performance construction materials, with an emphasis on
-            <strong>biochar-enhanced concrete</strong> and <strong>biochar/bio-oil-modified asphalt</strong> to reduce the
-            carbon footprint of the built environment.
-          </p>
+    <section id="research" class="grid grid-2">
+      <div class="card">
+        <h2 class="h2">Research</h2>
+        <p class="muted">Update this paragraph with a 2–4 sentence overview of your research mission.</p>
+        <div class="pill-row" aria-label="Research themes">
+          <span class="pill">Low‑carbon cementitious composites</span>
+          <span class="pill">Biochar & waste-derived materials</span>
+          <span class="pill">Self‑sensing / piezoresistive concrete</span>
+          <span class="pill">Durability, transport, and LCA</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="h2">Featured project</h2>
+        <p class="muted">Add a short project highlight with one image.</p>
+        <img class="img" src="assets/featured.jpg" alt="Featured project image" />
+        <p class="small muted" style="margin:10px 0 0;">Tip: put your image at <b>assets/featured.jpg</b> (or change the path).</p>
+      </div>
+    </section>
 
-          <p class="small">
-            <strong>Dr. Sharareh Shirzad</strong><br/>
-            Assistant Professor and Program Director, Building Science<br/>
-            Department of Sustainable Technology and the Built Environment, Appalachian State University
-          </p>
-
-          <div class="btnrow">
-            <a class="btn primary" href="#research">Explore research</a>
-            <a class="btn" href="https://scholar.google.com/citations?user=aDMPD_gAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
-            <a class="btn" href="CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-            <a class="btn" href="#contact">Collaborate / Hire students</a>
+    <section id="people" class="card">
+      <h2 class="h2">People</h2>
+      <div class="grid grid-3" style="margin-top:12px;">
+        <div class="card">
+          <div class="person">
+            <img class="img avatar" src="assets/pi.jpg" alt="Photo of Dr. Sharareh Shirzad" />
+            <div>
+              <h3>Dr. Sharareh Shirzad</h3>
+              <p>Assistant Professor & Program Director, Building Science</p>
+              <p class="small">Appalachian State University</p>
+            </div>
           </div>
-
-          <div class="pillrow">
-            <span class="pill">Biochar Concrete</span>
-            <span class="pill">Self-Sensing Concrete</span>
-            <span class="pill">Sustainable Construction</span>
-            <span class="pill">Biochar & Bio-Oil Asphalt</span>
-            <span class="pill">Self-Healing Asphalt</span>
+        </div>
+        <div class="card">
+          <div class="person">
+            <img class="img avatar" src="assets/student1.jpg" alt="Student photo" />
+            <div>
+              <h3>Student Name</h3>
+              <p>Role (e.g., MS Student)</p>
+              <p class="small">Topic / project</p>
+            </div>
           </div>
         </div>
-
         <div class="card">
-          <h3 style="margin-top:0;">Lab Director</h3>
-          <img src="HeadshotShirzad.jpg" alt="Dr. Sharareh Shirzad" class="img">
-          <p class="small" style="margin:12px 0 0;">
-            Email: <a href="mailto:Shirzads@appstate.edu">Shirzads@appstate.edu</a><br/>
-            Boone, NC
-          </p>
-          <p class="note" style="margin:10px 0 0;">
-            If the CV link doesn’t work, upload your PDF to the repo as <code>CV.pdf</code>.
-          </p>
+          <div class="person">
+            <img class="img avatar" src="assets/student2.jpg" alt="Student photo" />
+            <div>
+              <h3>Student Name</h3>
+              <p>Role (e.g., Undergraduate Researcher)</p>
+              <p class="small">Topic / project</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="research">
-      <h2>Research Focus</h2>
+    <section id="publications" class="card">
+      <h2 class="h2">Publications</h2>
+      <p class="muted">Add your Google Scholar link or list selected papers below.</p>
+      <ul class="muted">
+        <li>Paper 1 — Authors — Journal/Conference — Year — <a href="#">DOI</a></li>
+        <li>Paper 2 — Authors — Journal/Conference — Year — <a href="#">PDF</a></li>
+      </ul>
+    </section>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Biochar Concrete</h3>
-          <ul class="list">
-            <li><strong>Carbon sequestration & sustainability:</strong> Biochar as a partial cement replacement reduces CO₂ emissions.</li>
-            <li><strong>Performance enhancement:</strong> Optimizing biochar particle size, type, and pre-treatment improves workability, strength, and durability.</li>
-            <li><strong>Smart infrastructure:</strong> Self-sensing, biochar-infused concrete for SHM, wireless connectivity, and energy harvesting.</li>
-          </ul>
-        </div>
+    <section id="press" class="card">
+      <h2 class="h2">Press</h2>
+      <ul class="muted">
+        <li><a href="#">News item</a> — Outlet — Year</li>
+      </ul>
+    </section>
 
-        <div class="card">
-          <h3>Biochar & Bio-Oil Asphalt</h3>
-          <ul class="list">
-            <li><strong>Sustainable pavements:</strong> Partial replacement of petroleum-based asphalt binders with biochar and bio-oil.</li>
-            <li><strong>Durability & resilience:</strong> Enhances aging resistance, healing efficiency, and environmental performance.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Broader Impact</h3>
-          <p class="small">
-            The lab promotes low-carbon, circular construction, transforms waste into high-value materials,
-            and advances smart, durable infrastructure for a sustainable future.
-          </p>
-        </div>
+    <section id="gallery" class="card">
+      <h2 class="h2">Gallery</h2>
+      <p class="muted">A simple 3-image row. Replace the filenames in /assets/.</p>
+      <div class="grid grid-3" style="margin-top:12px;">
+        <img class="img" src="assets/gallery1.jpg" alt="Gallery image 1" />
+        <img class="img" src="assets/gallery2.jpg" alt="Gallery image 2" />
+        <img class="img" src="assets/gallery3.jpg" alt="Gallery image 3" />
       </div>
     </section>
 
-    <section id="people">
-      <h2>People</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Principal Investigator</h3>
-          <p class="small" style="margin:0;">
-            <strong>Sharareh (Sheri) Shirzad</strong><br/>
-            Assistant Professor<br/>
-            <a href="mailto:Shirzads@appstate.edu">Shirzads@appstate.edu</a>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Current Students</h3>
-          <ul class="list">
-            <li><strong>Michael Ayiku</strong> — Graduate Student · <a href="mailto:ayikum@appstate.edu">ayikum@appstate.edu</a></li>
-            <li><strong>CJ Burns</strong> — Undergraduate · <a href="mailto:burnscp1@appstate.edu">burnscp1@appstate.edu</a></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Previous Lab Members</h3>
-          <ul class="list">
-            <li><strong>Jonathan Culpepper</strong></li>
-            <li><strong>Daniel Rose</strong></li>
-            <li><strong>Hyla Zouzias</strong></li>
-          </ul>
-        </div>
-      </div>
+    <section id="contact" class="card">
+      <h2 class="h2">Contact</h2>
+      <p class="muted">Email: <a href="mailto:you@university.edu">you@university.edu</a><br />
+      Department / Lab Address<br />
+      Boone, NC</p>
     </section>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <div class="card">
-        <p class="small" style="margin-top:0;">
-          Full publication list: <a href="https://scholar.google.com/citations?user=aDMPD_gAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
-        </p>
-        <ul class="list">
-          <li>Rose, D., Shirzad, S. (2024). “Innovations in Green Concrete: Combining Metakaolin and Arundo Grass Biochar for Enhanced Sustainability.” <em>Sustainability</em>, 16, 11219.</li>
-          <li>Culpepper, J., Shirzad, S. (2025). “Impact of Arundo donax Biochar and Class F Fly Ash on the Mechanical Properties of Hydraulic Cement Mortar.” <em>Construction Research Congress 2026</em>.</li>
-          <li>Shirzad, S., Zouzias, H. (2024). “Enhancing the performance of wood-based bio-asphalt: strategies and innovations.” <em>Clean Technologies and Environmental Policy</em>.</li>
-          <li>Shirzad, S., Zouzias, H. (2023). “Chemical and Rheological Characterization of Polyurethane Modified Bio-Asphalt.” <em>ASCE International Airfield & Highway Pavements Conference (Pavements 2023)</em>.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="presentations">
-      <h2>Presentations</h2>
-      <div class="card">
-        <ul class="list">
-          <li>Culpepper, J., Shirzad, S. (2025). “Impact of Arundo donax Biochar and Class F Fly Ash on the Mechanical Properties of Hydraulic Cement Mortar.” <em>Construction Research Congress 2026</em>.</li>
-          <li>Rose, D., Shirzad, S. “The effect of Metakaolin on the Properties of Biochar Concrete.” Poster presentation at <em>TRB Annual Meeting</em>, Jan 2025, Washington, DC.</li>
-          <li>Culpepper, J., Shirzad, S. “Optimizing the Mixture Design of Biochar-Fly Ash Concrete for Low-Carbon Construction.” Poster presentation at <em>ACI Concrete Convention</em>, Nov 2024, Philadelphia, PA.</li>
-          <li>Rose, D., Shirzad, S. “Enhancing Concrete Pavement Sustainability: Local Biochar and Metakaolin Applications.” <em>ASCE International Airfield & Highway Pavements Conference</em>, June 2024, Atlanta, GA.</li>
-          <li>Rose, D., Shirzad, S. “Reducing the Carbon Footprint of Concrete Construction by Using Local Wood-Based Biochar.” <em>Research and Creative Activity at Appalachian</em>, Aug 2023.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <p class="small">These images are loaded from your GitHub repo (file names must match exactly).</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Biochar–Fly Ash Concrete</h3>
-          <img src="BiocharFlyAsh.JPG" alt="Biochar FlyAsh Concrete" class="img">
-        </div>
-
-        <div class="card">
-          <h3>Compressive Strength</h3>
-          <img src="CompressiveStrengthofConcrete.jpg" alt="Compressive Strength of Concrete" class="img">
-        </div>
-
-        <div class="card">
-          <h3>Biochar Processing</h3>
-          <img src="HammerMillvspassing40.JPG" alt="Hammer mill vs passing 40" class="img">
-        </div>
-
-        <div class="card">
-          <h3>Vicat Apparatus</h3>
-          <img src="VICAT.JPG" alt="Vicat apparatus" class="img">
-        </div>
-
-        <div class="card">
-          <h3>Mortar Cube Samples</h3>
-          <!-- If this image doesn't load, click the file in GitHub and copy its exact extension (PNG/JPG) -->
-          <img src="MortarCubeSampleswithandwithoutBiochar.PNG" alt="Mortar cube samples with and without biochar" class="img">
-          <p class="note" style="margin:10px 0 0;">
-            If this one fails, the extension is different. Rename it to <code>mortar.png</code> and update the src to <code>mortar.png</code>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p class="small" style="margin-top:0;">
-          <strong>Dr. Sharareh (Sheri) Shirzad</strong><br/>
-          Assistant Professor and Program Director, Building Science<br/>
-          Department of Sustainable Technology and the Built Environment, Appalachian State University<br/>
-          Boone, NC<br/><br/>
-          <strong>Email:</strong> <a href="mailto:Shirzads@appstate.edu">Shirzads@appstate.edu</a>
-        </p>
-        <p class="small" style="margin-bottom:0;">
-          For industry partnerships or student hiring, please include a short description of your needs and timeframe.
-        </p>
-      </div>
-    </section>
-
-    <div class="footer">
-      © <span id="y"></span> Sustainable Construction Materials Lab · Appalachian State University
-    </div>
+    <footer>
+      <div class="small">© <span id="year"></span> Dr. Sharareh Shirzad. Built with a single HTML file.</div>
+    </footer>
   </main>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto-fallback for broken images so the layout doesn’t collapse.
+    // Put a placeholder at: assets/placeholder.jpg
+    document.addEventListener('error', function (e) {
+      const el = e.target;
+      if (el && el.tagName === 'IMG') {
+        const placeholder = 'assets/placeholder.jpg';
+        if (!el.dataset.fallbackApplied) {
+          el.dataset.fallbackApplied = '1';
+          el.classList.add('img-missing');
+          el.alt = (el.alt ? el.alt + ' (image missing)' : 'Image missing');
+          el.src = placeholder;
+        }
+      }
+    }, true);
+
+    // Enable real concrete image background if you add assets/concrete.jpg
+    // document.body.classList.add('has-concrete');
   </script>
 </body>
 </html>
