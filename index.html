@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Sharareh Shirzad | Research</title>
+  <meta name="description" content="Research website for Dr. Sharareh Shirzad — sustainable and multifunctional infrastructure materials." />
+
+  <!--
+    Single‑file starter site.
+    ✅ Easy to edit
+    ✅ Works on GitHub Pages as-is
+    ✅ No build tools required
+
+    IMAGES NOT SHOWING?
+    - Put images in /assets/ and reference them like: assets/yourphoto.jpg
+    - GitHub Pages is case-sensitive (Photo.jpg != photo.jpg)
+    - If you used Google Drive/OneDrive “share links”, they won’t render as images here.
+      Upload the images into the repo instead.
+
+    Optional concrete background image:
+    - Add: assets/concrete.jpg
+    - Then enable it by adding:  document.body.classList.add('has-concrete');  (see script at bottom)
+  -->
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:rgba(15,27,51,.70);
+      --text:#e8eefc;
+      --muted:#b8c6e6;
+      --accent:#7cc4ff;
+      --accent2:#7dffcf;
+      --border:rgba(255,255,255,.14);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: var(--bg);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    /* Concrete-like background (no image required). */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.78), rgba(11,18,32,.92)),
+        radial-gradient(1200px 800px at 10% 0%, rgba(124,196,255,.18), transparent 55%),
+        radial-gradient(900px 700px at 90% 10%, rgba(125,255,207,.12), transparent 60%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0 1px, transparent 1px 6px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.015) 0 1px, transparent 1px 7px);
+      background-size: cover;
+      background-position: center;
+      background-repeat:no-repeat;
+      filter: contrast(1.05);
+    }
+
+    /* Optional real concrete image overlay */
+    body.has-concrete::before{
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.78), rgba(11,18,32,.92)),
+        url("assets/concrete.jpg") center/cover no-repeat;
+    }
+
+    a{color:inherit}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
+
+    /* Header styled like your sketch: centered title + tagline + tab row */
+    .site-header{padding:22px 0 10px;}
+    .hero-card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      background: linear-gradient(180deg, rgba(15,27,51,.80), rgba(15,27,51,.55));
+      overflow:hidden;
+      backdrop-filter: blur(8px);
+    }
+    .hero-inner{padding:26px 22px 10px;}
+    .hero-text{max-width: 900px; margin: 0 auto; text-align:center;}
+    .kicker{margin:0 0 8px; color:var(--muted); letter-spacing:.14em; text-transform:uppercase; font-size:.78rem;}
+    .site-title{margin:0; font-size:clamp(1.8rem, 3.2vw, 2.6rem); letter-spacing:.2px;}
+    .tagline{margin:10px 0 0; color:var(--muted); font-size:1.02rem;}
+
+    .tabs{
+      display:flex;
+      gap:8px;
+      padding:12px;
+      border-top:1px solid var(--border);
+      justify-content:center;
+      flex-wrap:wrap;
+      background: rgba(0,0,0,.12);
+    }
+    .tab{
+      text-decoration:none;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      color:var(--text);
+      font-size:.95rem;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .tab:hover{transform: translateY(-1px); background: rgba(124,196,255,.10); border-color: rgba(124,196,255,.35);}
+
+    /* Sections */
+    section{padding:22px 0;}
+    .grid{display:grid; gap:18px;}
+    .grid-2{grid-template-columns: 1.1fr .9fr;}
+    .grid-3{grid-template-columns: repeat(3, minmax(0, 1fr));}
+    @media (max-width: 920px){
+      .grid-2,.grid-3{grid-template-columns:1fr;}
+    }
+
+    .card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background: rgba(15,27,51,.60);
+      box-shadow:var(--shadow);
+      padding:18px;
+      backdrop-filter: blur(8px);
+    }
+    .h2{font-size:1.25rem; margin:0 0 10px;}
+    .muted{color:var(--muted)}
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+    .pill{border:1px solid var(--border); border-radius:999px; padding:8px 10px; font-size:.92rem; background: rgba(255,255,255,.03)}
+
+    /* Images */
+    img{max-width:100%; height:auto; display:block;}
+    .img{width:100%; border-radius:14px; border:1px solid var(--border); background: rgba(255,255,255,.04); object-fit:cover;}
+    .img-missing{filter: grayscale(1); opacity:.85;}
+
+    /* People cards */
+    .person{display:flex; gap:14px; align-items:flex-start;}
+    .avatar{width:68px; height:68px; border-radius:16px; flex:0 0 auto;}
+    .person h3{margin:0 0 2px; font-size:1.02rem;}
+    .person p{margin:0; color:var(--muted); font-size:.95rem;}
+
+    /* Footer */
+    footer{padding:30px 0 50px; color:var(--muted); font-size:.95rem;}
+    .small{font-size:.9rem}
+  </style>
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="wrap">
+      <div class="hero-card" role="banner" aria-label="Site header">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="kicker">Sustainable • Circular • Multifunctional Materials Lab</p>
+            <!-- Centered heading (per your sketch) -->
+            <h1 class="site-title">Materials Lab</h1>
+            <p class="tagline">Low‑carbon infrastructure materials • High performance • Sensing</p>
+          </div>
+        </div>
+        <!-- Tabs row (per your sketch) -->
+        <nav class="tabs" aria-label="Primary">
+          <a class="tab" href="#research">Research</a>
+          <a class="tab" href="#people">People</a>
+          <a class="tab" href="#publications">Publications</a>
+          <a class="tab" href="#press">Press</a>
+          <a class="tab" href="#gallery">Gallery</a>
+          <a class="tab" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="research" class="grid grid-2">
+      <div class="card">
+        <h2 class="h2">Research</h2>
+        <p class="muted">Update this paragraph with a 2–4 sentence overview of your research mission.</p>
+        <div class="pill-row" aria-label="Research themes">
+          <span class="pill">Low‑carbon cementitious composites</span>
+          <span class="pill">Biochar & waste-derived materials</span>
+          <span class="pill">Self‑sensing / piezoresistive concrete</span>
+          <span class="pill">Durability, transport, and LCA</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="h2">Featured project</h2>
+        <p class="muted">Add a short project highlight with one image.</p>
+        <img class="img" src="assets/featured.jpg" alt="Featured project image" />
+        <p class="small muted" style="margin:10px 0 0;">Tip: put your image at <b>assets/featured.jpg</b> (or change the path).</p>
+      </div>
+    </section>
+
+    <section id="people" class="card">
+      <h2 class="h2">People</h2>
+      <div class="grid grid-3" style="margin-top:12px;">
+        <div class="card">
+          <div class="person">
+            <img class="img avatar" src="assets/pi.jpg" alt="Photo of Dr. Sharareh Shirzad" />
+            <div>
+              <h3>Dr. Sharareh Shirzad</h3>
+              <p>Assistant Professor & Program Director, Building Science</p>
+              <p class="small">Appalachian State University</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="person">
+            <img class="img avatar" src="assets/student1.jpg" alt="Student photo" />
+            <div>
+              <h3>Student Name</h3>
+              <p>Role (e.g., MS Student)</p>
+              <p class="small">Topic / project</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="person">
+            <img class="img avatar" src="assets/student2.jpg" alt="Student photo" />
+            <div>
+              <h3>Student Name</h3>
+              <p>Role (e.g., Undergraduate Researcher)</p>
+              <p class="small">Topic / project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="card">
+      <h2 class="h2">Publications</h2>
+      <p class="muted">Add your Google Scholar link or list selected papers below.</p>
+      <ul class="muted">
+        <li>Paper 1 — Authors — Journal/Conference — Year — <a href="#">DOI</a></li>
+        <li>Paper 2 — Authors — Journal/Conference — Year — <a href="#">PDF</a></li>
+      </ul>
+    </section>
+
+    <section id="press" class="card">
+      <h2 class="h2">Press</h2>
+      <ul class="muted">
+        <li><a href="#">News item</a> — Outlet — Year</li>
+      </ul>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2 class="h2">Gallery</h2>
+      <p class="muted">A simple 3-image row. Replace the filenames in /assets/.</p>
+      <div class="grid grid-3" style="margin-top:12px;">
+        <img class="img" src="assets/gallery1.jpg" alt="Gallery image 1" />
+        <img class="img" src="assets/gallery2.jpg" alt="Gallery image 2" />
+        <img class="img" src="assets/gallery3.jpg" alt="Gallery image 3" />
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2 class="h2">Contact</h2>
+      <p class="muted">Email: <a href="mailto:you@university.edu">you@university.edu</a><br />
+      Department / Lab Address<br />
+      Boone, NC</p>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> Dr. Sharareh Shirzad. Built with a single HTML file.</div>
+    </footer>
+  </main>
+
+  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto-fallback for broken images so the layout doesn’t collapse.
+    // Put a placeholder at: assets/placeholder.jpg
+    document.addEventListener('error', function (e) {
+      const el = e.target;
+      if (el && el.tagName === 'IMG') {
+        const placeholder = 'assets/placeholder.jpg';
+        if (!el.dataset.fallbackApplied) {
+          el.dataset.fallbackApplied = '1';
+          el.classList.add('img-missing');
+          el.alt = (el.alt ? el.alt + ' (image missing)' : 'Image missing');
+          el.src = placeholder;
+        }
+      }
+    }, true);
+
+    // Enable real concrete image background if you add assets/concrete.jpg
+    // document.body.classList.add('has-concrete');
+  </script>
+</body>
+</html>
