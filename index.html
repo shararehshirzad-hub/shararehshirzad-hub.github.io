@@ -639,35 +639,202 @@
 </script>
 
     
-    <!-- Contact -->
-    <section id="contact" class="card">
-      <h2 class="h2">Contact</h2>
+ <!-- Contact -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
 
-      <p class="muted">
-        Email:
-        <a href="mailto:shirzads@appstate.edu">shirzads@appstate.edu</a><br /><br />
+    <!-- LEFT: Contact Info -->
+    <div class="contact-info">
+      <h2>Contact</h2>
 
-        Sharareh Shirzad <br />
-        Sustainable Technology and the Built Environment <br />
-        Appalachian State University <br />
-        Katherine Harper Hall <br />
-        Boone, NC
+      <p class="contact-name"><strong>Dr. Sharareh Shirzad</strong></p>
+      <p>Assistant Professor & Program Director</p>
+      <p>Building Science Program</p>
+      <p>Appalachian State University</p>
+
+      <p>Email:
+        <a href="mailto:shirzads@appstate.edu">shirzads@appstate.edu</a>
       </p>
+      <p>Office: Holmes Convocation Center</p>
 
-      <a href="cv.html" target="_blank" rel="noopener">View Full CV</a>
+      <!-- CV Button -->
+      <a class="cv-button" href="cv.html" target="_blank" rel="noopener">
+        View Full CV
+      </a>
 
-      <div style="margin-top:18px; display:flex; gap:18px; font-size:1.4rem;">
-        <a href="https://scholar.google.com/citations?user=aDMPD_gAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+      <!-- Social Icons -->
+      <div class="contact-icons">
+        <a href="https://scholar.google.com/citations?user=aDMPD_gAAAAJ&hl=en"
+           target="_blank" rel="noopener" aria-label="Google Scholar">
           <i class="fa-solid fa-graduation-cap"></i>
         </a>
-        <a href="https://www.linkedin.com/in/sharareh-shirzad-1a130b72/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/sharareh-shirzad-1a130b72/"
+           target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://stbe.appstate.edu/directory/dr-sharareh-shirzad" target="_blank" rel="noopener" aria-label="App State Profile">
+        <a href="https://stbe.appstate.edu/directory/dr-sharareh-shirzad"
+           target="_blank" rel="noopener" aria-label="App State Profile">
           <i class="fa-solid fa-university"></i>
         </a>
       </div>
-    </section>
+    </div>
+
+    <!-- RIGHT: Image -->
+    <div class="contact-image">
+      <img src="assets/BCSandCube.webp" alt="Biochar and control concrete cubes">
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Section background + spacing */
+.contact-section{
+  margin-top:60px;
+  padding:56px 20px;
+  background:linear-gradient(to right, #f8f9fb, #eef1f5);
+  border-radius:18px;
+}
+
+.contact-container{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:56px;
+}
+
+/* Left column */
+.contact-info{ flex:1; }
+.contact-info h2{
+  font-size:32px;
+  margin:0 0 18px;
+}
+.contact-info p{
+  margin:8px 0;
+  font-size:16px;
+  color:#2b2b2b;
+  line-height:1.5;
+}
+.contact-info a{
+  color:#1a4a8a;
+  text-decoration:none;
+}
+.contact-info a:hover{
+  text-decoration:underline;
+}
+
+.contact-name{ margin-top:0; }
+
+/* Professional CV button */
+.cv-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:18px;
+
+  padding:11px 18px;
+  border-radius:12px;
+
+  background:#0f172a;              /* deep navy */
+  color:#ffffff !important;
+  text-decoration:none !important;
+
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:0.2px;
+
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 10px 22px rgba(15,23,42,0.18);
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.cv-button::after{
+  content:"↗";
+  font-size:14px;
+  opacity:0.9;
+  transform:translateY(-1px);
+}
+
+.cv-button:hover{
+  background:#111c35;
+  transform:translateY(-2px);
+  box-shadow:0 16px 32px rgba(15,23,42,0.26);
+}
+
+.cv-button:active{
+  transform:translateY(0px);
+  box-shadow:0 10px 22px rgba(15,23,42,0.18);
+}
+
+.cv-button:focus{
+  outline:3px solid rgba(59,130,246,0.35);
+  outline-offset:3px;
+}
+
+/* Icons row */
+.contact-icons{
+  margin-top:18px;
+  display:flex;
+  gap:18px;
+  font-size:1.45rem;
+}
+.contact-icons a{
+  color:#111;
+  opacity:0.85;
+  transition:transform .2s ease, opacity .2s ease;
+  text-decoration:none;
+}
+.contact-icons a:hover{
+  transform:translateY(-2px);
+  opacity:1;
+}
+
+/* Right column image + effects */
+.contact-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  perspective:1000px;
+}
+
+.contact-image img{
+  width:100%;
+  max-width:420px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  transition:transform 0.6s ease, box-shadow 0.6s ease;
+  animation:floatImage 5s ease-in-out infinite;
+  object-fit:cover;
+}
+
+.contact-image img:hover{
+  transform:scale(1.05) rotateY(4deg);
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+}
+
+@keyframes floatImage{
+  0% { transform:translateY(0px); }
+  50% { transform:translateY(-10px); }
+  100% { transform:translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .contact-container{
+    flex-direction:column;
+    text-align:center;
+  }
+  .contact-icons{
+    justify-content:center;
+  }
+  .contact-image img{
+    max-width:340px;
+  }
+}
+</style>
 
     <footer>
       <div class="small">© <span id="year"></span> Dr. Sharareh Shirzad. Built with a single HTML file.</div>
