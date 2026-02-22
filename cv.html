@@ -1,342 +1,436 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'/>
-<meta name='viewport' content='width=device-width, initial-scale=1'/>
-<title>Sharareh (sherry) Shirzad <br>
-  Ph.D., LEED GA | CV</title>
-<style>
-:root{
-  --text:#111827;
-  --muted:#374151;
-  --rule:#d1d5db;
-  --link:#0b57d0;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: Georgia, "Times New Roman", serif;
-  color:var(--text);
-  background:#fff;
-  line-height:1.55;
-}
-.container{max-width:980px; margin:40px auto; padding:0 22px;}
-header{
-  display:flex; gap:24px; align-items:flex-end; justify-content:space-between;
-  border-bottom:2px solid var(--rule);
-  padding-bottom:14px;
-  margin-bottom:22px;
-}
-h1{margin:0; font-size:2rem; letter-spacing:.2px;}
-.header-right{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; text-align:right;}
-.header-right div{margin:2px 0; color:var(--muted); font-size:.95rem;}
-.header-right a{color:var(--link); text-decoration:none;}
-.header-right a:hover{text-decoration:underline;}
-nav{
-  margin:14px 0 26px;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  display:flex; flex-wrap:wrap; gap:10px;
-}
-nav a{
-  border:1px solid var(--rule);
-  padding:6px 10px;
-  border-radius:999px;
-  text-decoration:none;
-  color:#111827;
-  font-size:.92rem;
-}
-nav a:hover{background:#f3f4f6;}
-section{margin:28px 0;}
-h2{
-  margin:0 0 10px;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  font-size:1.05rem;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:#111827;
-  border-bottom:1px solid var(--rule);
-  padding-bottom:6px;
-}
-p{margin:8px 0;}
-ul{margin:8px 0 0; padding-left:20px;}
-li{margin:6px 0;}
-/* Hanging indent for publications-style lists */
-ol.pubs{margin:8px 0 0; padding-left:26px;}
-ol.pubs li{margin:10px 0; padding-left:6px;}
-ol.pubs li{ text-indent:-14px;}
-.small-muted{color:var(--muted); font-size:.92rem;}
-.strong{font-weight:700;}
-a{color:var(--link);}
-</style></head><body><div class='container'>
-<header>
-<div><h1>Sharareh (sherry) Shirzad <br>
-  Ph.D., LEED GA</h1></div>
-<div class='header-right'><div>Email: <a href='mailto:shararehshirzad@gmail.com'>shararehshirzad@gmail.com</a></div><div>Phone: 225-603-1343</div></div>
-</header>
-<nav aria-label='CV sections'><a href='#professional-summary'>Professional Summary</a><a href='#education'>Education</a><a href='#teaching-and-research-experience'>Teaching And Research Experience</a><a href='#industry-experience'>Industry Experience</a><a href='#peer-reviewed-journal-publications'>Peer-Reviewed Journal Publications</a><a href='#conference-proceedings'>Conference Proceedings</a><a href='#presentations'>Presentations</a><a href='#funding'>Funding</a><a href='#awards'>Awards</a><a href='#patents'>Patents</a><a href='#technical-reports'>Technical Reports</a><a href='#academic-services'>Academic Services</a><a href='#memberships'>Memberships</a><a href='#certificates'>Certificates</a></nav>
-<section id='professional-summary'>
-<h2>Professional Summary</h2>
-<p>Assistant Professor specializing in sustainable and smart infrastructure materials, including self-healing asphalt and biochar-engineered concrete for low-carbon, resilient structural systems. Over a decade of experience integrating experimental research, data-driven modeling, and industry collaboration. Proven record of securing competitive funding, high-impact publications, and leading interdisciplinary projects advancing resilient, intelligent, and sustainable infrastructure.</p>
-<section id="education">
-<section id="education">
-  <h2>Education</h2>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sharareh (Sherry) Shirzad, Ph.D., LEED GA | CV</title>
 
-  <!-- LSU -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline;">
-    <p><strong>Louisiana State University</strong></p>
-    <p>Baton Rouge, LA</p>
-  </div>
+  <!-- Font Awesome icons (CDNJS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <div style="display:flex; justify-content:space-between; align-items:baseline;">
-    <p><strong>Ph.D., Engineering Science</strong></p>
-    <p>Dec 2019</p>
-  </div>
-  <p>Bert S. Turner Department of Construction Management</p>
-  <p class="small-muted">
-    Dissertation: Effect of the Light-Activated Self-Healing Polymer on the Rheological,
-    Mechanical, and Self-Healing Performance of Asphalt Pavements Containing
-    Recycled Asphalt Materials (RAS/RAP).
-  </p>
+  <style>
+    :root{
+      --text:#111827;
+      --muted:#374151;
+      --rule:#d1d5db;
+      --link:#0b57d0;
+      --chip:#f3f4f6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:#fff;
+      line-height:1.55;
+    }
+    .container{max-width:980px; margin:40px auto; padding:0 22px;}
 
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:10px;">
-    <p><strong>M.S., Construction Management</strong></p>
-    <p>Dec 2018</p>
-  </div>
+    header{
+      display:flex;
+      gap:24px;
+      align-items:flex-end;
+      justify-content:space-between;
+      border-bottom:2px solid var(--rule);
+      padding-bottom:14px;
+      margin-bottom:18px;
+    }
+    h1{margin:0; font-size:2rem; letter-spacing:.2px; line-height:1.15;}
+    .subhead{margin-top:6px; color:var(--muted); font-size:1rem;}
 
-  <!-- Tafresh -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:22px;">
-    <p><strong>Tafresh University</strong></p>
-    <p>Tafresh, Iran</p>
-  </div>
+    .header-right{ text-align:right; }
+    .header-right div{margin:2px 0; color:var(--muted); font-size:.95rem;}
+    .header-right a{color:var(--link); text-decoration:none;}
+    .header-right a:hover{text-decoration:underline;}
 
-  <div style="display:flex; justify-content:space-between; align-items:baseline;">
-    <p><strong>M.S., Structural Engineering</strong></p>
-    <p>Aug 2006 – May 2008</p>
-  </div>
-  <p class="small-muted">
-    Thesis: Parameter Identification in Truss Structures Using Strain Measurements.
-  </p>
+    /* Icon buttons under email */
+    .icon-row{
+      margin-top:10px;
+      display:flex;
+      gap:12px;
+      justify-content:flex-end;
+      font-size:1.15rem;
+    }
+    .icon-row a{
+      width:36px; height:36px;
+      display:inline-flex; align-items:center; justify-content:center;
+      border:1px solid var(--rule);
+      border-radius:999px;
+      background:var(--chip);
+      color:#111827;
+      text-decoration:none;
+      transition: transform .12s ease, background .12s ease;
+    }
+    .icon-row a:hover{transform: translateY(-1px); background:#e5e7eb;}
 
-  <!-- Amirkabir -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:22px;">
-    <p><strong>Amirkabir University of Technology</strong></p>
-    <p>Tehran, Iran</p>
-  </div>
+    nav{
+      margin:14px 0 26px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    nav a{
+      border:1px solid var(--rule);
+      padding:6px 10px;
+      border-radius:999px;
+      text-decoration:none;
+      color:#111827;
+      font-size:.92rem;
+      background:#fff;
+    }
+    nav a:hover{background:#f3f4f6;}
 
-  <div style="display:flex; justify-content:space-between; align-items:baseline;">
-    <p><strong>B.S., Civil Engineering</strong></p>
-    <p>Aug 2001 – May 2005</p>
-  </div>
+    section{margin:28px 0;}
+    h2{
+      margin:0 0 10px;
+      font-size:1.05rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      border-bottom:1px solid var(--rule);
+      padding-bottom:6px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    h2 i{
+      color:var(--muted);
+      font-size:.98rem;
+    }
 
-</section>
-  
-<section id="teaching-and-research-experience">
-  <h2>Teaching and Research Experience</h2>
+    p{margin:8px 0;}
+    ul{margin:10px 0 0; padding-left:22px;}
+    li{margin:8px 0;}
+    a{color:var(--link);}
 
-  <!-- Assistant Professor -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline;">
-    <p><strong>Assistant Professor</strong></p>
-    <p>Aug 2020–Present</p>
-  </div>
-  <p>Appalachian State University – Department of Sustainable Technology and the Built Environment</p>
+    /* Consistent “role + date” rows */
+    .row{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap:14px;
+    }
+    .row p{margin:0;}
+    .spacer{margin-top:20px;}
+    .small-muted{color:var(--muted); font-size:.92rem;}
 
-  <ul>
-    <li>Materials and Structures I (Construction Materials)</li>
-    <li>Materials and Structures III (Soil and Foundation)</li>
-    <li>Advanced Concrete Technologies</li>
-    <li>Materials Testing Lab (Aggregates, Concrete, Steel, and Soil)</li>
-  </ul>
+    /* Publications / proceedings / presentations: use same bullet style + more spacing */
+    .pubs{
+      list-style-type: disc;
+      padding-left:22px;
+      margin-top:10px;
+    }
+    .pubs li{margin:14px 0;}
+  </style>
+</head>
 
-  <!-- Teaching Assistant -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:20px;">
-    <p><strong>Teaching/Research Assistant (Online and On-Campus)</strong></p>
-    <p>Aug 2015–Aug 2019</p>
-  </div>
-  <p>Louisiana State University – Baton Rouge, Louisiana</p>
+<body>
+<div class="container">
 
-  <ul>
-    <li>Construction Materials and Methods</li>
-    <li>Construction Contracting</li>
-    <li>Estimating in Construction</li>
-    <li>Mechanical and Electrical Systems</li>
-  </ul>
-</section>
+  <header>
+    <div>
+      <h1>Sharareh (Sherry) Shirzad</h1>
+      <div class="subhead">Ph.D., LEED GA</div>
+    </div>
 
-</section>
-  
-<section id="industry-experience">
-  <h2>Industry Experience</h2>
+    <div class="header-right">
+      <div>Email: <a href="mailto:shararehshirzad@gmail.com">shararehshirzad@gmail.com</a></div>
+      <div>Phone: 225-603-1343</div>
 
-  <!-- Transportation Engineer -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline;">
-    <p><strong>Transportation Engineer</strong></p>
-    <p>Jan 2020 – July 2020</p>
-  </div>
-  <p>Maryland Department of Transportation, State Highway Administration</p>
-  <ul>
-    <li>Pavement design and rehabilitation.</li>
-  </ul>
+      <!-- Icons under email -->
+      <div class="icon-row" aria-label="Profile links">
+        <a href="https://scholar.google.com/citations?user=aDMPD_gAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sharareh-shirzad-1a130b72/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </header>
 
-  <!-- Graduate Research Assistant -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:20px;">
-    <p><strong>Graduate Research Assistant (Online and On-Campus)</strong></p>
-    <p>Aug 2015 – Aug 2019</p>
-  </div>
-  <p>Louisiana State University – Baton Rouge, Louisiana</p>
-  <ul>
-    <li>Evaluated the effect of recycled asphalt materials (RAP/RAS) on rheological, mechanical, and self-healing properties of asphalt pavements.</li>
-    <li>Examined the effect of different healing agents on durability and performance of asphalt mixtures.</li>
-    <li>Conducted Pavement Management System analysis for Southeast Parish of Baton Rouge.</li>
-    <li>Compared Mechanical-Empirical Pavement Design Guide (MEPDG) results with laboratory testing.</li>
-  </ul>
+  <nav aria-label="CV sections">
+    <a href="#professional-summary">Professional Summary</a>
+    <a href="#education">Education</a>
+    <a href="#teaching-and-research-experience">Teaching & Research</a>
+    <a href="#industry-experience">Industry Experience</a>
+    <a href="#peer-reviewed-journal-publications">Journal Publications</a>
+    <a href="#conference-proceedings">Conference Proceedings</a>
+    <a href="#presentations">Presentations</a>
+    <a href="#funding">Funding</a>
+    <a href="#awards">Awards</a>
+    <a href="#patents">Patents</a>
+    <a href="#technical-reports">Technical Reports</a>
+    <a href="#academic-services">Academic Services</a>
+    <a href="#memberships">Memberships</a>
+    <a href="#certificates">Certificates</a>
+  </nav>
 
-  <!-- Civil Engineer – Samat -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:20px;">
-    <p><strong>Civil Engineer</strong></p>
-    <p>Sep 2012 – Aug 2014</p>
-  </div>
-  <p>Samat Consulting Co., Tehran, Iran</p>
-  <ul>
-    <li>Performed inspection, data collection, and analysis for the Bridge Management System (BMS).</li>
-  </ul>
+  <section id="professional-summary">
+    <h2><i class="fa-solid fa-user" aria-hidden="true"></i> Professional Summary</h2>
+    <p>
+      Assistant Professor specializing in sustainable and smart infrastructure materials, including self-healing asphalt and biochar-engineered concrete for low-carbon, resilient structural systems. Over a decade of experience integrating experimental research, data-driven modeling, and industry collaboration. Proven record of securing competitive funding, high-impact publications, and leading interdisciplinary projects advancing resilient, intelligent, and sustainable infrastructure.
+    </p>
+  </section>
 
-  <!-- Civil Engineer – Perdis Ruz -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:20px;">
-    <p><strong>Civil Engineer</strong></p>
-    <p>Sep 2010 – Aug 2012</p>
-  </div>
-  <p>Perdis Ruz Consulting Co., Tehran, Iran</p>
-  <ul>
-    <li>Performed seismic design of commercial and residential buildings and prepared project cost estimates.</li>
-  </ul>
+  <section id="education">
+    <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h2>
 
-  <!-- Civil Engineer – Arya Saze Arg -->
-  <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:20px;">
-    <p><strong>Civil Engineer</strong></p>
-    <p>Dec 2008 – Sep 2009</p>
-  </div>
-  <p>Arya Saze Arg Consulting Co., Tehran, Iran</p>
-  <ul>
-    <li>Prepared architectural and structural as-built plans, performed seismic design, and prepared cost estimates.</li>
-  </ul>
+    <div class="row">
+      <p><strong>Louisiana State University</strong></p>
+      <p>Baton Rouge, LA</p>
+    </div>
+    <div class="row">
+      <p><strong>Ph.D., Engineering Science</strong></p>
+      <p>Dec 2019</p>
+    </div>
+    <p>Bert S. Turner Department of Construction Management</p>
+    <p class="small-muted">
+      Dissertation: Effect of the Light-Activated Self-Healing Polymer on the Rheological, Mechanical, and Self-Healing Performance of Asphalt Pavements Containing Recycled Asphalt Materials (RAS/RAP).
+    </p>
+    <div class="row" style="margin-top:10px;">
+      <p><strong>M.S., Construction Management</strong></p>
+      <p>Dec 2018</p>
+    </div>
 
-</section>
-<section id='peer-reviewed-journal-publications'>
-<h2>Peer-Reviewed Journal Publications</h2>
-<ol class='pubs'>
-<li>Shirzad, S., Mahyari, E., Culpepper, J., and Burns, C. J. (2025). “Biochar–Fly Ash Blended Systems: Experimental Evaluation, Microstructural Characterization, and Predictive Modeling of Strength Development in Sustainable Mortar and Concrete.” Construction and Building Materials, Volume 509, 31 January 2026, 145216. <a href="https://doi.org/10.1016/j.conbuildmat.2026.145216" target="_blank" rel="noopener">https://doi.org/10.1016/j.conbuildmat.2026.145216</a>.</li>
-<li>Marandi, N., Shirzad, S. (2025). “Sustainable Cement and Concrete Technologies A Review of Materials and Processes for Carbon Reduction.” Innovative Infrastructure Solutions (IISS).10:408. <a href="https://doi.org/10.1007/s41062-025-02213-5" target="_blank" rel="noopener">https://doi.org/10.1007/s41062-025-02213-5</a>.</li>
-<li>Rose, D., Shirzad, S., (2024). “Innovations in Green Concrete: Combining Metakaolin and Arundo Grass Biochar for Enhanced Sustainability.” Sustainability, 16, 11219. <a href="https://doi.org/10.3390/su162411219" target="_blank" rel="noopener">https://doi.org/10.3390/su162411219</a>.</li>
-<li>Shirzad, S., Zouzias, H. (2024). “Enhancing the performance of wood-based bio-asphalt: strategies and innovations.” Clean Technologies and Environmental Policy, <a href="https://doi.org/10.1007/s10098-024-02745-x" target="_blank" rel="noopener">https://doi.org/10.1007/s10098-024-02745-x</a>.</li>
-<li>Shirzad, S., Idris, I.I., Hassan, M. M., and Mohammad, L. N. (2023). “Self-Healing Capability and Mechanical Properties of Asphalt Mixtures Prepared with Light-Activated Polyurethane Prepolymer Modified Asphalt Binder.” Transportation Research Record, <a href="https://doi.org/10.1177/03611981221138522" target="_blank" rel="noopener">https://doi.org/10.1177/03611981221138522</a>.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., and Mohammad, L. N. (2020). “Rheological and Mechanical Evaluation of Polyurethane Prepolymer-Modified Asphalt Mixture with Self-Healing Abilities.” Journal of Materials in Civil Engineering, Volume 32 Issue 8.</li>
-<li>Aguirre, M. A., Hassan, Shirzad, S., M. M., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2020). “Evaluation of hollow-fibers encapsulating a rejuvenator in asphalt binders with recycled asphalt shingles.” International Journal of Pavement Research and Technology, volume 13, issue1, pages 108-119.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2019). “Rheological Properties of Asphalt Binder Modified with Recycled Asphalt Materials (RAS/RAP) and Light-Activated Self-Healing Polymers.” Construction and Building Materials, 220 187-195.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2019). “Mechanical Performance of Asphalt Mixtures Containing Recycled Asphalt Materials (RAP/RAS) and Light-Activated Self-Healing Polymer.” Journal of Materials in Civil Engineering, Vol. 31, Issue 11.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. (2019). “Laboratory Testing of Self-Healing Fibers in Asphalt Mixtures Prepared with Recycled Materials.” Transportation Research Record. <a href="https://doi.org/10.1177/0361198119836978" target="_blank" rel="noopener">https://doi.org/10.1177/0361198119836978</a>.</li>
-<li>Shirzad, S., Aguirre, M, Bonilla, L., Mohammad, L, Cooper, S. (2018). “Mechanistic-Empirical Pavement Performance and Cost-Effectiveness of Asphalt Mixtures Prepared with Recycled Asphalt Shingles.” Construction and Building Materials, 160 687–697.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. (2018). “Effects of Light-Activated Self-Healing Polymers on the Rheological Behaviors of Asphalt Binder Containing Recycled Asphalt Shingles.” Journal of the Transportation Research Board, DOI: 10.1177/0361198118772726.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. (2017). “Microencapsulated Sunflower Oil for Rejuvenation and Healing of Asphalt Mixtures.” Journal of Materials in Civil Engineering, 29(9), 04017147. doi:10.1061/(ASCE)mt.1943-5533.0001988.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. (2017). “Laboratory Testing of Self-Healing Microcapsules in Asphalt Mixtures Prepared with Recycled Asphalt Shingles.” Journal of Materials in Civil Engineering, 29(9), 04017099. doi:10.1061/1943-5533.0001942.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., &amp; Cooper, S. B. (2017). “Performance of Asphalt Rejuvenators in Hot-Mix Asphalt Containing Recycled Asphalt Shingles.”  Journal of the Transportation Research Board, 2633, 108-116. doi:10.3141/2633-13.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., &amp; Daly, W. H. (2016). “Evaluation of Sunflower Oil as a Rejuvenator and Its Microencapsulation as a Healing Agent.” Journal of Materials in Civil Engineering, 28(11), 04016116. doi:10.1061/(ASCE)mt.1943-5533.0001625.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Daly, W. H., &amp; Mohammad, L. N. (2016). “Micro-encapsulation of asphalt rejuvenators using melamine-formaldehyde.” Construction and Building Materials, 114, 29-39. doi:10.1016.</li>
-</ol>
-</section>
-<section id='conference-proceedings'>
-<h2>Conference Proceedings</h2>
-<ol class='pubs'>
-<li>Culpepper, J., Shirzad, S. (2025). “Impact of Arundo donax Biochar and Class F Fly Ash on the Mechanical Properties of Hydraulic Cement Mortar.” Construction Research Congress 2026.</li>
-<li>Shirzad, S., Zouzias, H. (2023). “Chemical and Rheological Characterization of Polyurethane Modified Bio-Asphalt.” ASCE International Airfield &amp; Highway Pavements Conference (Pavements 2023, Austin, Texas).</li>
-<li>Shirzad, S., Hassan, M. M., and Mohammad, L. N. (2020). “Laboratory Investigation of Self-Healing Polyurethane Pre-Polymer Modified Asphalt Mixtures.” Tran-SET 2020 conference, September 1–2, 2020 | Albuquerque, New Mexico (Conference Held Virtually).</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2019). “Laboratory Testing of Self-Healing Polymer Modified Asphalt Mixtures Containing Recycled Asphalt Materials (RAP/RAS).” MATEC Web of Conferences, April 2019.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. (2019). Performance Characteristics of Asphalt Binders containing Sodium-Alginate Hollow Fibers and Recycled Materials.” MATEC Web of Conferences, April 2019.</li>
-</ol>
-</section>
-<section id='presentations'>
-<h2>Presentations</h2>
-<ol class='pubs'>
-<li>Culpepper, J. Shirzad, S. (2026). “Biochar–Fly Ash Blended Systems: Effects on Mortar and 1 Concrete Strength.” Poster presentation at Transportation Research Board Annual Meeting, Jan 2026, Washington, DC.</li>
-<li>Culpepper, J., Shirzad, S. (2025). “Impact of Arundo donax Biochar and Class F Fly Ash on the Mechanical Properties of Hydraulic Cement Mortar.” Construction Research Congress 2026.</li>
-<li>Rose, D. Shirzad, S. “The effect of Metakaolin on the Properties of Biochar Concrete.” Poster presentation at Transportation Research Board Annual Meeting, Jan 2025, Washington, DC.</li>
-<li>Culpepper, J. Shirzad, S. “Optimizing the Mixture Design of Biochar-Fly Ash Concrete for Low-Carbon Construction.” Poster presentation at ACI Concrete Convention, November 2024, Philadelphia, PA.</li>
-<li>Rose, D. Shirzad, S. “Enhancing Concrete Pavement Sustainability: Local Biochar and Metakaolin Applications” ASCE International Airfield &amp; Highway Pavements Conference, June 2024, Atlanta, GA.</li>
-<li>Rose, D. Shirzad, S. “Reducing the Carbon Footprint of Concrete Construction by Using Local Wood-Based Biochar.” Research and Creative Activity at Appalachian. August 2023.</li>
-<li>Rose, D. Shirzad, S. “Biochar as a Supplementary Cementitious Material.” NCDOT Research &amp; Innovation Summit 2023.</li>
-<li>Shirzad, S., Zouzias, H. “Chemical and Rheological Characterization of Polyurethane Modified Bio-Asphalt.” ASCE International Airfield &amp; Highway Pavements Conference, June 2023, Austin, TX.</li>
-<li>Shirzad, S. “Chemical Characterization of Bio-Oil Modified Asphalt Binder.” Research and Creative Activity at Appalachian. October 2022.</li>
-<li>Shirzad, S., Hassan, M. M., and Mohammad, L. N. (2020). “Laboratory Investigation of Self-Healing Polyurethane Pre-Polymer Modified Asphalt Mixtures.” Paper presented at 2020 Transet Conference, September 2020.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. “Laboratory Testing of Self-Healing Polymer Modified Asphalt Mixtures Containing Recycled Asphalt Materials (RAP/RAS).” Poster presented at Tran-SET Conference, Apr 2019, San Antonio, TX.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. “Performance Characteristics of Asphalt Binders containing Sodium-Alginate Hollow Fibers and Recycled Materials.” Poster presented at Tran-SET Conference, Apr 2019, San Antonio, TX.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. Effects of Light-Activated Self-Healing Polymers on the Rheological Behaviors of Asphalt Binder Containing Recycled Asphalt Shingles. Poster presented at Transportation Research Board Annual Meeting, Jan 2018, Washington, DC.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. “Evaluation of Hollow-Fibers Encapsulating a Rejuvenator in Asphalt Binder with Recycled Asphalt Shingles.” Poster presented at Transportation Research Board Annual Meeting, Jan 2018, Washington, DC.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. “Enhancing the Durability and the Service Life of Asphalt Pavements Through Innovative Light-Induced Self-Healing Material.” Poster presented at Tran-SET Conference, Apr 2018, New Orleans, LA.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. “Development of a Self-Healing and Rejuvenating Mechanism for Asphalt Mixtures Containing Recycled Materials.” Poster presented at Tran-SET Conference, Apr 2018, New Orleans, LA.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. “Effects of Light-Activated Self-Healing Polymers on the Rheological Behaviors of Asphalt Binder Containing Recycled Asphalt Materials.” Poster presented at Louisiana Transportation Conference (LTC), Apr 2018, Baton Rouge, LA.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. Microencapsulated Sunflower Oil for Rejuvenation and Healing of Asphalt Mixtures. Poster presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
-<li>Shirzad, S., Aguirre, M, Bonilla, L., Mohammad, L, Cooper, S. Mechanistic-Empirical Pavement Performance and Cost-Effectiveness of Asphalt Mixtures Prepared with Recycled Asphalt Shingles. Paper presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. “Laboratory Testing of Self-Healing Microcapsules in Asphalt Mixtures Prepared with Recycled Asphalt Shingles.” Poster presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
-<li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., &amp; Cooper, S. B. “Performance of Asphalt Rejuvenators in Hot-Mix Asphalt Containing Recycled Asphalt Shingles.”  Paper presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
-<li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., &amp; Daly, W. H. “Evaluation of Sunflower Oil as a Rejuvenator and Its Microencapsulation as a Healing Agent.” Paper presented at Transportation Research Board Annual Meeting, Jan 2016, Washington, DC.</li>
-</ol>
-</section>
-<section id='funding'>
-<h2>Funding</h2>
-<ul>
-<li>PI - Enhancing the Aging Resistance of Bio-Oil-Modified Asphalt Binders Using Biochar, Research Institute for Environment, Energy and Economics (RIEEE), $5,000, Fall 2025.</li>
-<li>PI - Effects of Biochar Particle Size on Early-age Hydration of Cement Paste, University Research Center, $5,000. Fall 2025.</li>
-<li>PI - Reducing the Carbon Footprint of Concrete Construction by Using Local Wood-Based Biochar, Appalachian Energy Center, $15,000, Spring 2023.</li>
-<li>PI - Locally Sourced Wood-Based Biochar for Concrete Application, Appalachian Energy Center, $5,000, Spring 2022.</li>
-<li>PI - Performance of Sustainable Concrete Containing Plastic Wastes, University Research Center, $5,000. Fall 2021.</li>
-<li>PI - Chemical and rheological characterization of bio-oil modified asphalt binder, University Research Center, $5,000. Fall 2020.</li>
-</ul>
-</section>
-<section id='awards'>
-<h2>Awards</h2>
-<ul>
-<li>Award - Effects of Biochar Saturation on Early-age Hydration of Cement Paste, Undergraduate Research Assistantship $1,500, Fall 2025.</li>
-<li>Award - Effects of Biochar Particle Size on Early-age Hydration of Cement Paste, Undergraduate Research Assistantship $1,500, Spring 2025.</li>
-<li>Award - Biochar as an Additive in Limestone Calcined Clay Cement for Sustainable Construction, Graduate Research Assistant Mentoring Program (GRAM) ($14,000), Fall 2024.</li>
-<li>Award - Application of Biochar-Calcium Carbonate as Carbon Sequestering Additives in Cement Mortar, Summer Stipend for Writing a Grant (SWAG), $7,000, Summer 2023. Submitted and NSF proposal.</li>
-<li>Award - Chemical and rheological characterization of bio-binder from forestry waste: Sustainable modifier for asphalt binder, Summer Stipend for Writing a Grant (SWAG), $7,000, Summer 2022. Submitted and NSF proposal.</li>
-<li>Award - Application of Biochar-Calcium Carbonate as Carbon Sequestering Additives in Cement Mortar, Graduate Research Assistant Mentoring Program (GRAM) ($14,000), Fall 2022.</li>
-</ul>
-</section>
-<section id='patents'>
-<h2>Patents</h2>
-<p>Shirzad, S., Hassan, M. (2022). “US20220243040A1: UV light activated self-healing asphalt binder and uses thereof.” United States Patent and Trademark Office. <a href="https://patentimages.storage.googleapis.com/dc/59/1d/37969052b72b27/US20220243040A1.pdf" target="_blank" rel="noopener">https://patentimages.storage.googleapis.com/dc/59/1d/37969052b72b27/US20220243040A1.pdf</a></p>
-</section>
-<section id='technical-reports'>
-<h2>Technical Reports</h2>
-<ol class='pubs'>
-<li>Enhancing the Durability and the Service Life of Asphalt Pavements Through Innovative Light-Induced Self-Healing Material (Transportation Consortium of South-Central States (Tran-SET) - Project No. 17BLSU02)</li>
-</ol>
-</section>
-<section id='academic-services'>
-<h2>Academic Services</h2>
-<ul>
-<li>Reviewer of the Transportation Research Board (TRB)</li>
-<li>Reviewer of the Journal of Materials in Civil Engineering (ASCE)</li>
-<li>Reviewer of the Journal of Case Studies in Construction Materials (Elsevier)</li>
-<li>Reviewer of the Journal of Construction and Building Materials (Elsevier)</li>
-<li>Reviewer of the Journal of Materials and Design (Elsevier)</li>
-<li>Reviewer of the Journal of Cleaner Production (Elsevier)</li>
-<li>TranSET Project Review Committee Member</li>
-</ul>
-</section>
-<section id='memberships'>
-<h2>Memberships</h2>
-<ul>
-<li>American Society of Civil Engineers (Aff.M.ASCE)</li>
-<li>Women of Asphalt (WOA)</li>
-<li>Society of Women Engineers (SWE)</li>
-</ul>
-</section>
-<section id='certificates'>
-<h2>Certificates</h2>
-<ul>
-<li>Designing Effective Online Courses                                                                                                                                2022</li>
-<li>Inclusive Teaching                                                                                                                                                            2021</li>
-<li>Leadership in Energy and Environmental Design (LEED)                                                                                              2019</li>
-<li>Graduate Certificate in Materials Science and Engineering                                                                                             2018</li>
-</ul>
-</section>
-<p class='small-muted'>Last updated: <span id='cvdate'></span></p>
-</div><script>document.getElementById('cvdate').textContent = new Date().toLocaleDateString();</script></body></html>
+    <div class="row spacer">
+      <p><strong>Tafresh University</strong></p>
+      <p>Tafresh, Iran</p>
+    </div>
+    <div class="row">
+      <p><strong>M.S., Structural Engineering</strong></p>
+      <p>Aug 2006 – May 2008</p>
+    </div>
+    <p class="small-muted">Thesis: Parameter Identification in Truss Structures Using Strain Measurements.</p>
+
+    <div class="row spacer">
+      <p><strong>Amirkabir University of Technology</strong></p>
+      <p>Tehran, Iran</p>
+    </div>
+    <div class="row">
+      <p><strong>B.S., Civil Engineering</strong></p>
+      <p>Aug 2001 – May 2005</p>
+    </div>
+  </section>
+
+  <section id="teaching-and-research-experience">
+    <h2><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> Teaching and Research Experience</h2>
+
+    <div class="row">
+      <p><strong>Assistant Professor</strong></p>
+      <p>Aug 2020 – Present</p>
+    </div>
+    <p>Appalachian State University – Department of Sustainable Technology and the Built Environment</p>
+    <ul>
+      <li>Materials and Structures I (Construction Materials)</li>
+      <li>Materials and Structures III (Soil and Foundation)</li>
+      <li>Advanced Concrete Technologies</li>
+      <li>Materials Testing Lab (Aggregates, Concrete, Steel, and Soil)</li>
+    </ul>
+
+    <div class="row spacer">
+      <p><strong>Teaching/Research Assistant (Online and On-Campus)</strong></p>
+      <p>Aug 2015 – Aug 2019</p>
+    </div>
+    <p>Louisiana State University – Baton Rouge, Louisiana</p>
+    <ul>
+      <li>Construction Materials and Methods</li>
+      <li>Construction Contracting</li>
+      <li>Estimating in Construction</li>
+      <li>Mechanical and Electrical Systems</li>
+    </ul>
+  </section>
+
+  <section id="industry-experience">
+    <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Industry Experience</h2>
+
+    <div class="row">
+      <p><strong>Transportation Engineer</strong></p>
+      <p>Jan 2020 – July 2020</p>
+    </div>
+    <p>Maryland Department of Transportation, State Highway Administration</p>
+    <ul>
+      <li>Pavement design and rehabilitation.</li>
+    </ul>
+
+    <div class="row spacer">
+      <p><strong>Graduate Research Assistant (Online and On-Campus)</strong></p>
+      <p>Aug 2015 – Aug 2019</p>
+    </div>
+    <p>Louisiana State University – Baton Rouge, Louisiana</p>
+    <ul>
+      <li>Evaluated the effect of recycled asphalt materials (RAP/RAS) on rheological, mechanical, and self-healing properties of asphalt pavements.</li>
+      <li>Examined the effect of different healing agents on durability and performance of asphalt mixtures.</li>
+      <li>Conducted Pavement Management System analysis for Southeast Parish of Baton Rouge.</li>
+      <li>Compared Mechanical-Empirical Pavement Design Guide (MEPDG) results with laboratory testing.</li>
+    </ul>
+
+    <div class="row spacer">
+      <p><strong>Civil Engineer</strong></p>
+      <p>Sep 2012 – Aug 2014</p>
+    </div>
+    <p>Samat Consulting Co., Tehran, Iran</p>
+    <ul>
+      <li>Performed inspection, data collection, and analysis for the Bridge Management System (BMS).</li>
+    </ul>
+
+    <div class="row spacer">
+      <p><strong>Civil Engineer</strong></p>
+      <p>Sep 2010 – Aug 2012</p>
+    </div>
+    <p>Perdis Ruz Consulting Co., Tehran, Iran</p>
+    <ul>
+      <li>Performed seismic design of commercial and residential buildings and prepared project cost estimates.</li>
+    </ul>
+
+    <div class="row spacer">
+      <p><strong>Civil Engineer</strong></p>
+      <p>Dec 2008 – Sep 2009</p>
+    </div>
+    <p>Arya Saze Arg Consulting Co., Tehran, Iran</p>
+    <ul>
+      <li>Prepared architectural and structural as-built plans, performed seismic design, and prepared cost estimates.</li>
+    </ul>
+  </section>
+
+  <section id="peer-reviewed-journal-publications">
+    <h2><i class="fa-solid fa-book" aria-hidden="true"></i> Peer-Reviewed Journal Publications</h2>
+    <ul class="pubs">
+      <li>Shirzad, S., Mahyari, E., Culpepper, J., and Burns, C. J. (2025). “Biochar–Fly Ash Blended Systems: Experimental Evaluation, Microstructural Characterization, and Predictive Modeling of Strength Development in Sustainable Mortar and Concrete.” Construction and Building Materials, Volume 509, 31 January 2026, 145216. <a href="https://doi.org/10.1016/j.conbuildmat.2026.145216" target="_blank" rel="noopener">https://doi.org/10.1016/j.conbuildmat.2026.145216</a>.</li>
+      <li>Marandi, N., Shirzad, S. (2025). “Sustainable Cement and Concrete Technologies A Review of Materials and Processes for Carbon Reduction.” Innovative Infrastructure Solutions (IISS).10:408. <a href="https://doi.org/10.1007/s41062-025-02213-5" target="_blank" rel="noopener">https://doi.org/10.1007/s41062-025-02213-5</a>.</li>
+      <li>Rose, D., Shirzad, S., (2024). “Innovations in Green Concrete: Combining Metakaolin and Arundo Grass Biochar for Enhanced Sustainability.” Sustainability, 16, 11219. <a href="https://doi.org/10.3390/su162411219" target="_blank" rel="noopener">https://doi.org/10.3390/su162411219</a>.</li>
+      <li>Shirzad, S., Zouzias, H. (2024). “Enhancing the performance of wood-based bio-asphalt: strategies and innovations.” Clean Technologies and Environmental Policy, <a href="https://doi.org/10.1007/s10098-024-02745-x" target="_blank" rel="noopener">https://doi.org/10.1007/s10098-024-02745-x</a>.</li>
+      <li>Shirzad, S., Idris, I.I., Hassan, M. M., and Mohammad, L. N. (2023). “Self-Healing Capability and Mechanical Properties of Asphalt Mixtures Prepared with Light-Activated Polyurethane Prepolymer Modified Asphalt Binder.” Transportation Research Record, <a href="https://doi.org/10.1177/03611981221138522" target="_blank" rel="noopener">https://doi.org/10.1177/03611981221138522</a>.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., and Mohammad, L. N. (2020). “Rheological and Mechanical Evaluation of Polyurethane Prepolymer-Modified Asphalt Mixture with Self-Healing Abilities.” Journal of Materials in Civil Engineering, Volume 32 Issue 8.</li>
+      <li>Aguirre, M. A., Hassan, Shirzad, S., M. M., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2020). “Evaluation of hollow-fibers encapsulating a rejuvenator in asphalt binders with recycled asphalt shingles.” International Journal of Pavement Research and Technology, volume 13, issue1, pages 108-119.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2019). “Rheological Properties of Asphalt Binder Modified with Recycled Asphalt Materials (RAS/RAP) and Light-Activated Self-Healing Polymers.” Construction and Building Materials, 220 187-195.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2019). “Mechanical Performance of Asphalt Mixtures Containing Recycled Asphalt Materials (RAP/RAS) and Light-Activated Self-Healing Polymer.” Journal of Materials in Civil Engineering, Vol. 31, Issue 11.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. (2019). “Laboratory Testing of Self-Healing Fibers in Asphalt Mixtures Prepared with Recycled Materials.” Transportation Research Record. <a href="https://doi.org/10.1177/0361198119836978" target="_blank" rel="noopener">https://doi.org/10.1177/0361198119836978</a>.</li>
+      <li>Shirzad, S., Aguirre, M, Bonilla, L., Mohammad, L, Cooper, S. (2018). “Mechanistic-Empirical Pavement Performance and Cost-Effectiveness of Asphalt Mixtures Prepared with Recycled Asphalt Shingles.” Construction and Building Materials, 160 687–697.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. (2018). “Effects of Light-Activated Self-Healing Polymers on the Rheological Behaviors of Asphalt Binder Containing Recycled Asphalt Shingles.” Journal of the Transportation Research Board, DOI: 10.1177/0361198118772726.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. (2017). “Microencapsulated Sunflower Oil for Rejuvenation and Healing of Asphalt Mixtures.” Journal of Materials in Civil Engineering, 29(9), 04017147. doi:10.1061/(ASCE)mt.1943-5533.0001988.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. (2017). “Laboratory Testing of Self-Healing Microcapsules in Asphalt Mixtures Prepared with Recycled Asphalt Shingles.” Journal of Materials in Civil Engineering, 29(9), 04017099. doi:10.1061/1943-5533.0001942.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., &amp; Cooper, S. B. (2017). “Performance of Asphalt Rejuvenators in Hot-Mix Asphalt Containing Recycled Asphalt Shingles.” Journal of the Transportation Research Board, 2633, 108-116. doi:10.3141/2633-13.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., &amp; Daly, W. H. (2016). “Evaluation of Sunflower Oil as a Rejuvenator and Its Microencapsulation as a Healing Agent.” Journal of Materials in Civil Engineering, 28(11), 04016116. doi:10.1061/(ASCE)mt.1943-5533.0001625.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Daly, W. H., &amp; Mohammad, L. N. (2016). “Micro-encapsulation of asphalt rejuvenators using melamine-formaldehyde.” Construction and Building Materials, 114, 29-39. doi:10.1016.</li>
+    </ul>
+  </section>
+
+  <section id="conference-proceedings">
+    <h2><i class="fa-solid fa-people-group" aria-hidden="true"></i> Conference Proceedings</h2>
+    <ul class="pubs">
+      <li>Culpepper, J., Shirzad, S. (2025). “Impact of Arundo donax Biochar and Class F Fly Ash on the Mechanical Properties of Hydraulic Cement Mortar.” Construction Research Congress 2026.</li>
+      <li>Shirzad, S., Zouzias, H. (2023). “Chemical and Rheological Characterization of Polyurethane Modified Bio-Asphalt.” ASCE International Airfield &amp; Highway Pavements Conference (Pavements 2023, Austin, Texas).</li>
+      <li>Shirzad, S., Hassan, M. M., and Mohammad, L. N. (2020). “Laboratory Investigation of Self-Healing Polyurethane Pre-Polymer Modified Asphalt Mixtures.” Tran-SET 2020 conference, September 1–2, 2020 | Albuquerque, New Mexico (Conference Held Virtually).</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. (2019). “Laboratory Testing of Self-Healing Polymer Modified Asphalt Mixtures Containing Recycled Asphalt Materials (RAP/RAS).” MATEC Web of Conferences, April 2019.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. (2019). “Performance Characteristics of Asphalt Binders containing Sodium-Alginate Hollow Fibers and Recycled Materials.” MATEC Web of Conferences, April 2019.</li>
+    </ul>
+  </section>
+
+  <section id="presentations">
+    <h2><i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i> Presentations</h2>
+    <ul class="pubs">
+      <li>Culpepper, J. Shirzad, S. (2026). “Biochar–Fly Ash Blended Systems: Effects on Mortar and Concrete Strength.” Poster presentation at Transportation Research Board Annual Meeting, Jan 2026, Washington, DC.</li>
+      <li>Culpepper, J., Shirzad, S. (2025). “Impact of Arundo donax Biochar and Class F Fly Ash on the Mechanical Properties of Hydraulic Cement Mortar.” Construction Research Congress 2026.</li>
+      <li>Rose, D. Shirzad, S. “The effect of Metakaolin on the Properties of Biochar Concrete.” Poster presentation at Transportation Research Board Annual Meeting, Jan 2025, Washington, DC.</li>
+      <li>Culpepper, J. Shirzad, S. “Optimizing the Mixture Design of Biochar-Fly Ash Concrete for Low-Carbon Construction.” Poster presentation at ACI Concrete Convention, November 2024, Philadelphia, PA.</li>
+      <li>Rose, D. Shirzad, S. “Enhancing Concrete Pavement Sustainability: Local Biochar and Metakaolin Applications” ASCE International Airfield &amp; Highway Pavements Conference, June 2024, Atlanta, GA.</li>
+      <li>Rose, D. Shirzad, S. “Reducing the Carbon Footprint of Concrete Construction by Using Local Wood-Based Biochar.” Research and Creative Activity at Appalachian. August 2023.</li>
+      <li>Rose, D. Shirzad, S. “Biochar as a Supplementary Cementitious Material.” NCDOT Research &amp; Innovation Summit 2023.</li>
+      <li>Shirzad, S., Zouzias, H. “Chemical and Rheological Characterization of Polyurethane Modified Bio-Asphalt.” ASCE International Airfield &amp; Highway Pavements Conference, June 2023, Austin, TX.</li>
+      <li>Shirzad, S. “Chemical Characterization of Bio-Oil Modified Asphalt Binder.” Research and Creative Activity at Appalachian. October 2022.</li>
+      <li>Shirzad, S., Hassan, M. M., and Mohammad, L. N. (2020). “Laboratory Investigation of Self-Healing Polyurethane Pre-Polymer Modified Asphalt Mixtures.” Paper presented at 2020 Transet Conference, September 2020.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. “Laboratory Testing of Self-Healing Polymer Modified Asphalt Mixtures Containing Recycled Asphalt Materials (RAP/RAS).” Poster presented at Tran-SET Conference, Apr 2019, San Antonio, TX.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. “Performance Characteristics of Asphalt Binders containing Sodium-Alginate Hollow Fibers and Recycled Materials.” Poster presented at Tran-SET Conference, Apr 2019, San Antonio, TX.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. “Effects of Light-Activated Self-Healing Polymers on the Rheological Behaviors of Asphalt Binder Containing Recycled Asphalt Shingles.” Poster presented at Transportation Research Board Annual Meeting, Jan 2018, Washington, DC.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. “Evaluation of Hollow-Fibers Encapsulating a Rejuvenator in Asphalt Binder with Recycled Asphalt Shingles.” Poster presented at Transportation Research Board Annual Meeting, Jan 2018, Washington, DC.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., &amp; Negulescu, I. I. “Enhancing the Durability and the Service Life of Asphalt Pavements Through Innovative Light-Induced Self-Healing Material.” Poster presented at Tran-SET Conference, Apr 2018, New Orleans, LA.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Cooper, S., &amp; Negulescu, I. I., Mohammad, L. N. “Development of a Self-Healing and Rejuvenating Mechanism for Asphalt Mixtures Containing Recycled Materials.” Poster presented at Tran-SET Conference, Apr 2018, New Orleans, LA.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Cooper, S., Mohammad, L. N., &amp; Negulescu, I. I. “Effects of Light-Activated Self-Healing Polymers on the Rheological Behaviors of Asphalt Binder Containing Recycled Asphalt Materials.” Poster presented at Louisiana Transportation Conference (LTC), Apr 2018, Baton Rouge, LA.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. Microencapsulated Sunflower Oil for Rejuvenation and Healing of Asphalt Mixtures. Poster presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
+      <li>Shirzad, S., Aguirre, M, Bonilla, L., Mohammad, L, Cooper, S. Mechanistic-Empirical Pavement Performance and Cost-Effectiveness of Asphalt Mixtures Prepared with Recycled Asphalt Shingles. Paper presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., Cooper, S., &amp; Negulescu, I. I. “Laboratory Testing of Self-Healing Microcapsules in Asphalt Mixtures Prepared with Recycled Asphalt Shingles.” Poster presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
+      <li>Aguirre, M. A., Hassan, M. M., Shirzad, S., Mohammad, L. N., &amp; Cooper, S. B. “Performance of Asphalt Rejuvenators in Hot-Mix Asphalt Containing Recycled Asphalt Shingles.” Paper presented at Transportation Research Board Annual Meeting, Jan 2017, Washington, DC.</li>
+      <li>Shirzad, S., Hassan, M. M., Aguirre, M. A., Mohammad, L. N., &amp; Daly, W. H. “Evaluation of Sunflower Oil as a Rejuvenator and Its Microencapsulation as a Healing Agent.” Paper presented at Transportation Research Board Annual Meeting, Jan 2016, Washington, DC.</li>
+    </ul>
+  </section>
+
+  <section id="funding">
+    <h2><i class="fa-solid fa-sack-dollar" aria-hidden="true"></i> Funding</h2>
+    <ul>
+      <li>PI - Enhancing the Aging Resistance of Bio-Oil-Modified Asphalt Binders Using Biochar, Research Institute for Environment, Energy and Economics (RIEEE), $5,000, Fall 2025.</li>
+      <li>PI - Effects of Biochar Particle Size on Early-age Hydration of Cement Paste, University Research Center, $5,000. Fall 2025.</li>
+      <li>PI - Reducing the Carbon Footprint of Concrete Construction by Using Local Wood-Based Biochar, Appalachian Energy Center, $15,000, Spring 2023.</li>
+      <li>PI - Locally Sourced Wood-Based Biochar for Concrete Application, Appalachian Energy Center, $5,000, Spring 2022.</li>
+      <li>PI - Performance of Sustainable Concrete Containing Plastic Wastes, University Research Center, $5,000. Fall 2021.</li>
+      <li>PI - Chemical and rheological characterization of bio-oil modified asphalt binder, University Research Center, $5,000. Fall 2020.</li>
+    </ul>
+  </section>
+
+  <section id="awards">
+    <h2><i class="fa-solid fa-trophy" aria-hidden="true"></i> Awards</h2>
+    <ul>
+      <li>Award - Effects of Biochar Saturation on Early-age Hydration of Cement Paste, Undergraduate Research Assistantship $1,500, Fall 2025.</li>
+      <li>Award - Effects of Biochar Particle Size on Early-age Hydration of Cement Paste, Undergraduate Research Assistantship $1,500, Spring 2025.</li>
+      <li>Award - Biochar as an Additive in Limestone Calcined Clay Cement for Sustainable Construction, Graduate Research Assistant Mentoring Program (GRAM) ($14,000), Fall 2024.</li>
+      <li>Award - Application of Biochar-Calcium Carbonate as Carbon Sequestering Additives in Cement Mortar, Summer Stipend for Writing a Grant (SWAG), $7,000, Summer 2023. Submitted and NSF proposal.</li>
+      <li>Award - Chemical and rheological characterization of bio-binder from forestry waste: Sustainable modifier for asphalt binder, Summer Stipend for Writing a Grant (SWAG), $7,000, Summer 2022. Submitted and NSF proposal.</li>
+      <li>Award - Application of Biochar-Calcium Carbonate as Carbon Sequestering Additives in Cement Mortar, Graduate Research Assistant Mentoring Program (GRAM) ($14,000), Fall 2022.</li>
+    </ul>
+  </section>
+
+  <section id="patents">
+    <h2><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Patents</h2>
+    <p>
+      Shirzad, S., Hassan, M. (2022). “US20220243040A1: UV light activated self-healing asphalt binder and uses thereof.” United States Patent and Trademark Office.
+      <a href="https://patentimages.storage.googleapis.com/dc/59/1d/37969052b72b27/US20220243040A1.pdf" target="_blank" rel="noopener">
+        https://patentimages.storage.googleapis.com/dc/59/1d/37969052b72b27/US20220243040A1.pdf
+      </a>
+    </p>
+  </section>
+
+  <section id="technical-reports">
+    <h2><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Technical Reports</h2>
+    <ul class="pubs">
+      <li>Enhancing the Durability and the Service Life of Asphalt Pavements Through Innovative Light-Induced Self-Healing Material (Transportation Consortium of South-Central States (Tran-SET) - Project No. 17BLSU02)</li>
+    </ul>
+  </section>
+
+  <section id="academic-services">
+    <h2><i class="fa-solid fa-handshake" aria-hidden="true"></i> Academic Services</h2>
+    <ul>
+      <li>Reviewer of the Transportation Research Board (TRB)</li>
+      <li>Reviewer of the Journal of Materials in Civil Engineering (ASCE)</li>
+      <li>Reviewer of the Journal of Case Studies in Construction Materials (Elsevier)</li>
+      <li>Reviewer of the Journal of Construction and Building Materials (Elsevier)</li>
+      <li>Reviewer of the Journal of Materials and Design (Elsevier)</li>
+      <li>Reviewer of the Journal of Cleaner Production (Elsevier)</li>
+      <li>TranSET Project Review Committee Member</li>
+    </ul>
+  </section>
+
+  <section id="memberships">
+    <h2><i class="fa-solid fa-id-badge" aria-hidden="true"></i> Memberships</h2>
+    <ul>
+      <li>American Society of Civil Engineers (Aff.M.ASCE)</li>
+      <li>Women of Asphalt (WOA)</li>
+      <li>Society of Women Engineers (SWE)</li>
+    </ul>
+  </section>
+
+  <section id="certificates">
+    <h2><i class="fa-solid fa-certificate" aria-hidden="true"></i> Certificates</h2>
+    <ul>
+      <li>Designing Effective Online Courses — 2022</li>
+      <li>Inclusive Teaching — 2021</li>
+      <li>Leadership in Energy and Environmental Design (LEED) — 2019</li>
+      <li>Graduate Certificate in Materials Science and Engineering — 2018</li>
+    </ul>
+  </section>
+
+  <p class="small-muted">Last updated: <span id="cvdate"></span></p>
+
+</div>
+
+<script>
+  document.getElementById('cvdate').textContent = new Date().toLocaleDateString();
+</script>
+</body>
+</html>
