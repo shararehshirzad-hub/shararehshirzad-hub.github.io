@@ -1,20 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dr. Sharareh Shirzad | Research</title>
   <meta name="description" content="Research website for Dr. Sharareh Shirzad — sustainable and multifunctional infrastructure materials." />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     :root{
       --bg:#ffffff;
-      --panel:rgba(245,245,245,1);
       --text:#111827;
       --muted:#4b5563;
-      --accent:#7cc4ff;
-      --accent2:#7dffcf;
       --border:rgba(17,24,39,.18);
       --shadow: 0 10px 26px rgba(0,0,0,.12);
       --radius:18px;
@@ -45,13 +43,13 @@
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
 
-    /* Header: centered title + tagline + tab row */
+    /* Header */
     .site-header{padding:22px 0 10px;}
 
     .hero-card{
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      background:#374151;              /* dark charcoal */
+      background:#374151;
       border:1px solid #2f3542;
       overflow:hidden;
       backdrop-filter: blur(8px);
@@ -75,7 +73,7 @@
       opacity:.9;
     }
 
-    /* Tabs row */
+    /* Tabs */
     .tabs{
       display:flex;
       gap:8px;
@@ -105,7 +103,7 @@
 
     /* Sections */
     section{padding:22px 0;}
-    main > section{ margin-bottom: 30px; }  /* ✅ consistent spacing between all main sections */
+    main > section{ margin-bottom: 30px; }
 
     .grid{display:grid; gap:18px;}
     .grid-2{grid-template-columns: 1fr 1fr;}
@@ -122,7 +120,7 @@
       padding: 18px;
       background:
         linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-        url("concrete.jpg");
+        url("assets/concrete.webp");
       background-size: cover;
       background-position: center;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -135,8 +133,13 @@
     .pill{border:1px solid var(--border); border-radius:999px; padding:8px 10px; font-size:.92rem; background: rgba(255,255,255,.03)}
 
     img{max-width:100%; height:auto; display:block;}
-    .img{width:100%; border-radius:14px; border:1px solid var(--border); background: rgba(255,255,255,.04); object-fit:cover;}
-    .img-missing{filter: grayscale(1); opacity:.85;}
+    .img{
+      width:100%;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      object-fit:cover;
+    }
 
     /* People cards */
     .person{display:flex; gap:14px; align-items:flex-start;}
@@ -146,6 +149,81 @@
 
     footer{padding:30px 0 50px; color:var(--muted); font-size:.95rem;}
     .small{font-size:.9rem}
+
+    /* ===== Gallery Carousel ===== */
+    .carousel{
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.5);
+    }
+    .carousel-track{
+      display:flex;
+      transition: transform .35s ease;
+      will-change: transform;
+    }
+    .slide{
+      min-width:100%;
+      padding:0;
+    }
+    .slide img{
+      width:100%;
+      height: min(62vh, 520px);
+      object-fit:cover;
+      display:block;
+    }
+    .carousel-ui{
+      position:absolute;
+      inset:auto 0 0 0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px;
+      background: linear-gradient(transparent, rgba(0,0,0,.45));
+      gap:10px;
+    }
+    .car-btn{
+      width:42px; height:42px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.35);
+      background: rgba(0,0,0,.35);
+      color:#fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      transition: transform .12s ease, background .12s ease;
+    }
+    .car-btn:hover{transform: translateY(-1px); background: rgba(0,0,0,.5);}
+    .car-dots{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      justify-content:center;
+      flex:1;
+    }
+    .dot{
+      width:9px; height:9px;
+      border-radius:99px;
+      border:1px solid rgba(255,255,255,.65);
+      background: rgba(255,255,255,.25);
+      cursor:pointer;
+    }
+    .dot.active{background: rgba(255,255,255,.95);}
+    .car-caption{
+      color:#fff;
+      font-size:.92rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width: 40%;
+      text-align:right;
+    }
+    @media (max-width:720px){
+      .car-caption{display:none;}
+      .slide img{height: 320px;}
+    }
   </style>
 </head>
 
@@ -177,7 +255,7 @@
 
   <main class="wrap">
 
-    <!-- ✅ Research (Featured removed) -->
+    <!-- Research -->
     <section id="research" class="card">
       <h2 class="h2">Research</h2>
       <p class="muted">
@@ -203,7 +281,10 @@
       <h2 class="h2">Research Team</h2>
 
       <div class="person" style="margin-bottom: 30px;">
-        <img class="img avatar" src="HeadshotShirzad.jpg" alt="Dr. Sharareh Shirzad" />
+        <img class="img avatar"
+             src="assets/HeadshotShirzad.webp"
+             alt="Dr. Sharareh Shirzad"
+             loading="lazy" decoding="async" />
         <div>
           <h3>Lab Director: Dr. Sharareh Shirzad</h3>
           <p>Assistant Professor & Program Director, Building Science</p>
@@ -216,7 +297,10 @@
       <div class="grid grid-2">
         <div class="card">
           <div class="person">
-            <img class="img avatar" src="M.jpg" alt="Michael Ayiku" />
+            <img class="img avatar"
+                 src="assets/M.webp"
+                 alt="Michael Ayiku"
+                 loading="lazy" decoding="async" />
             <div>
               <h3>Michael Ayiku</h3>
               <p>M.S. Student</p>
@@ -227,7 +311,10 @@
 
         <div class="card">
           <div class="person">
-            <img class="img avatar" src="CJ.jpg" alt="CJ Burns" />
+            <img class="img avatar"
+                 src="assets/CJ.webp"
+                 alt="CJ Burns"
+                 loading="lazy" decoding="async" />
             <div>
               <h3>Chris (CJ) Burns</h3>
               <p>Undergraduate Researcher</p>
@@ -254,127 +341,126 @@
           <strong>Shirzad</strong>, S., Mahyari, E., Culpepper, J., and Burns, C. J. (2025).
           “Biochar–Fly Ash Blended Systems: Experimental Evaluation, Microstructural Characterization, and Predictive Modeling of Strength Development in Sustainable Mortar and Concrete.”
           <strong>Construction and Building Materials</strong>, Volume 509, 31 January 2026, 145216.
-          — <a href="https://doi.org/10.1016/j.conbuildmat.2026.145216" target="_blank">View Article</a>
+          — <a href="https://doi.org/10.1016/j.conbuildmat.2026.145216" target="_blank" rel="noopener">View Article</a>
         </li>
 
         <li style="margin-bottom: 22px;">
           Marandi, N., <strong>Shirzad</strong>, S. (2025).
           “Sustainable Cement and Concrete Technologies: A Review of Materials and Processes for Carbon Reduction.”
           <strong>Innovative Infrastructure Solutions</strong>, 10:408.
-          — <a href="https://doi.org/10.1007/s41062-025-02213-5" target="_blank">View Article</a>
+          — <a href="https://doi.org/10.1007/s41062-025-02213-5" target="_blank" rel="noopener">View Article</a>
         </li>
 
         <li style="margin-bottom: 22px;">
           Rose, D., <strong>Shirzad</strong>, S. (2024).
           “Innovations in Green Concrete: Combining Metakaolin and Arundo Grass Biochar for Enhanced Sustainability.”
           <strong>Sustainability</strong>, 16, 11219.
-          — <a href="https://doi.org/10.3390/su162411219" target="_blank">View Article</a>
+          — <a href="https://doi.org/10.3390/su162411219" target="_blank" rel="noopener">View Article</a>
         </li>
 
         <li style="margin-bottom: 22px;">
           <strong>Shirzad</strong>, S., Zouzias, H. (2024).
           “Enhancing the Performance of Wood-Based Bio-Asphalt: Strategies and Innovations.”
           <strong>Clean Technologies and Environmental Policy</strong>.
-          — <a href="https://doi.org/10.1007/s10098-024-02745-x" target="_blank">View Article</a>
+          — <a href="https://doi.org/10.1007/s10098-024-02745-x" target="_blank" rel="noopener">View Article</a>
         </li>
 
-        <li style="margin-bottom: 22px;">
+        <li style="margin-bottom: 0;">
           <strong>Shirzad</strong>, S., Idris, I. I., Hassan, M. M., and Mohammad, L. N. (2023).
           “Self-Healing Capability and Mechanical Properties of Asphalt Mixtures Prepared with Light-Activated Polyurethane Prepolymer Modified Asphalt Binder.”
           <strong>Transportation Research Record</strong>.
-          — <a href="https://doi.org/10.1177/03611981221138522" target="_blank">View Article</a>
+          — <a href="https://doi.org/10.1177/03611981221138522" target="_blank" rel="noopener">View Article</a>
         </li>
       </ul>
     </section>
 
-    <!-- ✅ Recent Presentations (4 image spots) -->
+    <!-- Presentations -->
     <section id="presentations" class="card">
       <h2 class="h2">Recent Presentations</h2>
-      
+
       <ul class="muted" style="list-style-type: disc; padding-left: 20px;">
-       <li style="margin-bottom: 22px;">
-          Burns, C. J., and Shirzad, S.
-          “Optimizing Biochar Fineness for Enhanced Workability and Strength in Cement Mortar.”
+        <li style="margin-bottom: 18px;">
+          Burns, C. J., and Shirzad, S. “Optimizing Biochar Fineness for Enhanced Workability and Strength in Cement Mortar.”
           <strong>CRC and CI Joint Conference</strong>, March 2026, San Antonio, TX.
         </li>
-        
-        <li style="margin-bottom: 22px;">
-          Culpepper, J., and Shirzad, S.
-          “Biochar–Fly Ash Blended Systems: Effects on Mortar and Concrete Strength.”
+        <li style="margin-bottom: 18px;">
+          Culpepper, J., and Shirzad, S. “Biochar–Fly Ash Blended Systems: Effects on Mortar and Concrete Strength.”
           <strong>Transportation Research Board Annual Meeting</strong>, Jan 2026, Washington, DC.
         </li>
-
-        <li style="margin-bottom: 22px;">
-          Rose, D., and Shirzad, S.
-          “The effect of Metakaolin on the Properties of Biochar Concrete.”
+        <li style="margin-bottom: 18px;">
+          Rose, D., and Shirzad, S. “The effect of Metakaolin on the Properties of Biochar Concrete.”
           <strong>Transportation Research Board Annual Meeting</strong>, Jan 2025, Washington, DC.
         </li>
-
-        <li style="margin-bottom: 22px;">
-          Shirzad, S. and Zouzias, H.
-          “Chemical and Rheological Characterization of Polyurethane Modified Bio-Asphalt.”
-          <strong>International Airfield & Highway Pavements Conference</strong>, June 2023, Austin, TX
+        <li style="margin-bottom: 0;">
+          Shirzad, S. and Zouzias, H. “Chemical and Rheological Characterization of Polyurethane Modified Bio-Asphalt.”
+          <strong>International Airfield &amp; Highway Pavements Conference</strong>, June 2023, Austin, TX.
         </li>
+      </ul>
 
       <div class="grid grid-2" style="margin-top:12px;">
-        <img class="img" src="TRB.jpg" alt="Presentation 1" />
-        <img class="img" src="TRB.jpg" alt="Presentation 2" />
-        <img class="img" src="TRB25.jpg" alt="Presentation 3" />
-        <img class="img" src="AppState.jpg" alt="Presentation 4" />
+        <img class="img" src="assets/TRB.webp" alt="TRB Presentation" loading="lazy" decoding="async" />
+        <img class="img" src="assets/TRB25.webp" alt="TRB 2025 Poster" loading="lazy" decoding="async" />
+        <img class="img" src="assets/AppState.webp" alt="App State Research Event" loading="lazy" decoding="async" />
+        <img class="img" src="assets/TRB.webp" alt="Presentation Image" loading="lazy" decoding="async" />
       </div>
-
-      <p class="small muted" style="margin:10px 0 0;">
-      </p>
     </section>
 
-    <!-- ✅ Fixed Gallery section -->
+    <!-- Gallery Carousel -->
     <section id="gallery" class="card">
       <h2 class="h2">Gallery</h2>
 
-      <div class="grid grid-3" style="margin-top:12px;">
-        <img class="img" src="Milledbiochar.JPG" alt="Milled biochar" />
-        <img class="img" src="BCFACube.JPG" alt="BCFA cube" />
-        <img class="img" src="Cubes.jpg" alt="Cubes" />
+      <div class="carousel" aria-label="Gallery carousel">
+        <div class="carousel-track" id="galleryTrack"></div>
+
+        <div class="carousel-ui">
+          <button class="car-btn" id="prevBtn" aria-label="Previous image" type="button">
+            <i class="fa-solid fa-play" style="transform: rotate(180deg);" aria-hidden="true"></i>
+          </button>
+
+          <div class="car-dots" id="galleryDots" aria-label="Gallery navigation dots"></div>
+
+          <button class="car-btn" id="nextBtn" aria-label="Next image" type="button">
+            <i class="fa-solid fa-play" aria-hidden="true"></i>
+          </button>
+
+          <div class="car-caption" id="galleryCaption"></div>
+        </div>
       </div>
+
+      <p class="small muted" style="margin:10px 0 0;">
+        To add more images: open the <b>galleryImages</b> list in the script and add a new line.
+      </p>
     </section>
 
-   <section id="contact" class="card">
-  <h2 class="h2">Contact</h2>
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h2 class="h2">Contact</h2>
 
-  <p class="muted">
-    Email: 
-    <a href="mailto:shirzads@appstate.edu">
-      shirzads@appstate.edu
-    </a><br /><br />
+      <p class="muted">
+        Email:
+        <a href="mailto:shirzads@appstate.edu">shirzads@appstate.edu</a><br /><br />
 
-    Sharareh Shirzad <br />
-    Sustainable Technology and the Built Environment <br />
-    Appalachian State University <br />
-    Katherine Harper Hall <br />
-    Boone, NC
-  </p>
-<a href="cv.html" target="_blank">
-  View Full CV
-</a>
-  <div style="margin-top:18px; display:flex; gap:18px; font-size:1.4rem;">
-    
-    <!-- Google Scholar -->
-    <a href="https://scholar.google.com/citations?user=aDMPD_gAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
-      <i class="fa-solid fa-graduation-cap"></i>
-    </a>
+        Sharareh Shirzad <br />
+        Sustainable Technology and the Built Environment <br />
+        Appalachian State University <br />
+        Katherine Harper Hall <br />
+        Boone, NC
+      </p>
 
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/sharareh-shirzad-1a130b72/" target="_blank" aria-label="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
+      <a href="cv.html" target="_blank" rel="noopener">View Full CV</a>
 
-    <!-- App State Page -->
-    <a href="https://stbe.appstate.edu/directory/dr-sharareh-shirzad" target="_blank" aria-label="App State Profile">
-      <i class="fa-solid fa-university"></i>
-    </a>
-
-  </div>
-</section>
+      <div style="margin-top:18px; display:flex; gap:18px; font-size:1.4rem;">
+        <a href="https://scholar.google.com/citations?user=aDMPD_gAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sharareh-shirzad-1a130b72/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://stbe.appstate.edu/directory/dr-sharareh-shirzad" target="_blank" rel="noopener" aria-label="App State Profile">
+          <i class="fa-solid fa-university"></i>
+        </a>
+      </div>
+    </section>
 
     <footer>
       <div class="small">© <span id="year"></span> Dr. Sharareh Shirzad. Built with a single HTML file.</div>
@@ -384,20 +470,75 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Optional: if an image path is wrong, this prevents broken layout.
-    // Upload a file named placeholder.jpg (in the same folder as index.html) if you want this.
-    document.addEventListener('error', function (e) {
-      const el = e.target;
-      if (el && el.tagName === 'IMG') {
-        const placeholder = 'placeholder.jpg';
-        if (!el.dataset.fallbackApplied) {
-          el.dataset.fallbackApplied = '1';
-          el.classList.add('img-missing');
-          el.alt = (el.alt ? el.alt + ' (image missing)' : 'Image missing');
-          el.src = placeholder;
-        }
-      }
-    }, true);
+    // ===== Gallery Carousel Setup =====
+    // Add more images here (just add another object).
+    // Make sure the file exists in /assets/ and the name matches exactly.
+    const galleryImages = [
+      { src: "assets/Milledbiochar.webp", alt: "Milled biochar", caption: "Milled biochar" },
+      { src: "assets/BCFACube.webp", alt: "BCFA cube", caption: "Biochar–Fly ash cube" },
+      { src: "assets/BCSandCube.webp", alt: "Biochar sand cube", caption: "Biochar sand cube" },
+      { src: "assets/Cubes.webp", alt: "Concrete cubes", caption: "Concrete cubes" },
+      { src: "assets/Cubes2.webp", alt: "Concrete cubes 2", caption: "Concrete cubes (set 2)" },
+      { src: "assets/SATBC.webp", alt: "SATBC", caption: "Asphalt / self-healing work" }
+    ];
+
+    const track = document.getElementById("galleryTrack");
+    const dotsWrap = document.getElementById("galleryDots");
+    const captionEl = document.getElementById("galleryCaption");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let index = 0;
+
+    function renderSlides() {
+      track.innerHTML = "";
+      dotsWrap.innerHTML = "";
+
+      galleryImages.forEach((img, i) => {
+        const slide = document.createElement("div");
+        slide.className = "slide";
+        slide.innerHTML = `
+          <img class="img"
+               src="${img.src}"
+               alt="${img.alt}"
+               loading="lazy"
+               decoding="async">
+        `;
+        track.appendChild(slide);
+
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot" + (i === index ? " active" : "");
+        dot.setAttribute("aria-label", `Go to image ${i + 1}`);
+        dot.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(dot);
+      });
+
+      updateUI();
+    }
+
+    function updateUI() {
+      track.style.transform = `translateX(${-index * 100}%)`;
+      [...dotsWrap.children].forEach((d, i) => d.classList.toggle("active", i === index));
+      captionEl.textContent = galleryImages[index]?.caption || "";
+    }
+
+    function goTo(i) {
+      index = (i + galleryImages.length) % galleryImages.length;
+      updateUI();
+    }
+
+    prevBtn.addEventListener("click", () => goTo(index - 1));
+    nextBtn.addEventListener("click", () => goTo(index + 1));
+
+    // Keyboard support
+    document.addEventListener("keydown", (e) => {
+      if (location.hash !== "#gallery") return;
+      if (e.key === "ArrowLeft") goTo(index - 1);
+      if (e.key === "ArrowRight") goTo(index + 1);
+    });
+
+    renderSlides();
   </script>
 </body>
 </html>
