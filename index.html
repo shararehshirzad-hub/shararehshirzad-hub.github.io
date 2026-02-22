@@ -6,7 +6,6 @@
   <title>Dr. Sharareh Shirzad | Research</title>
   <meta name="description" content="Research website for Dr. Sharareh Shirzad — sustainable and multifunctional infrastructure materials." />
 
-
   <style>
     :root{
       --bg:#ffffff;
@@ -33,7 +32,7 @@
       overflow-x:hidden;
     }
 
-    /* Page background: white (outside the boxes). */
+    /* Outside background (behind boxes) */
     body::before{
       content:"";
       position:fixed;
@@ -43,117 +42,107 @@
     }
 
     a{color:inherit}
-
     .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
 
-  /* Header: centered title + tagline + tab row */
-.site-header{padding:22px 0 10px;}
+    /* Header: centered title + tagline + tab row */
+    .site-header{padding:22px 0 10px;}
 
-.hero-card{
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  background:#374151;              /* dark charcoal */
-  border:1px solid #2f3542;
-  overflow:hidden;
-  backdrop-filter: blur(8px);
-}
+    .hero-card{
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      background:#374151;              /* dark charcoal */
+      border:1px solid #2f3542;
+      overflow:hidden;
+      backdrop-filter: blur(8px);
+    }
 
-.hero-inner{padding:26px 22px 10px;}
-.hero-text{max-width:900px; margin:0 auto; text-align:center;}
+    .hero-inner{padding:26px 22px 10px;}
+    .hero-text{max-width:900px; margin:0 auto; text-align:center;}
 
-/* Force header text white */
-.kicker{
-  margin:0 0 8px;
-  color:#ffffff;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-size:.78rem;
-  opacity:.85;
-}
+    .site-title{
+      text-transform:uppercase;
+      margin:0;
+      font-size:clamp(1.8rem, 3.2vw, 2.6rem);
+      letter-spacing:.2px;
+      color:#ffffff;
+    }
 
-.site-title{
-  text-transform:uppercase;
-  margin:0;
-  font-size:clamp(1.8rem, 3.2vw, 2.6rem);
-  letter-spacing:.2px;
-  color:#ffffff;
-}
+    .tagline{
+      margin:10px 0 0;
+      color:#ffffff;
+      font-size:1.02rem;
+      opacity:.9;
+    }
 
-.tagline{
-  margin:10px 0 0;
-  color:#ffffff;
-  font-size:1.02rem;
-  opacity:.85;
-}
+    /* Tabs row */
+    .tabs{
+      display:flex;
+      gap:8px;
+      padding:12px;
+      border-top:1px solid rgba(255,255,255,.18);
+      justify-content:center;
+      flex-wrap:wrap;
+      background: rgba(0,0,0,.10);
+    }
 
-/* Tabs row */
-.tabs{
-  display:flex;
-  gap:8px;
-  padding:12px;
-  border-top:1px solid rgba(255,255,255,.18);
-  justify-content:center;
-  flex-wrap:wrap;
-  background: rgba(0,0,0,.10);
-}
+    .tab{
+      text-decoration:none;
+      padding:10px 12px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px;
+      color:#ffffff;
+      font-size:.95rem;
+      background: rgba(255,255,255,.08);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
 
-/* Make menu text white */
-.tab{
-  text-decoration:none;
-  padding:10px 12px;
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:999px;
-  color:#ffffff;
-  font-size:.95rem;
-  background: rgba(255,255,255,.08);
-  transition: transform .12s ease, background .12s ease, border-color .12s ease;
-}
-
-.tab:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.16);
-  border-color: rgba(255,255,255,.50);
-}
+    .tab:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.16);
+      border-color: rgba(255,255,255,.50);
+    }
 
     /* Sections */
     section{padding:22px 0;}
+    main > section{ margin-bottom: 30px; }  /* ✅ consistent spacing between all main sections */
+
     .grid{display:grid; gap:18px;}
-    .grid-2{grid-template-columns: 1.1fr .9fr;}
+    .grid-2{grid-template-columns: 1fr 1fr;}
     .grid-3{grid-template-columns: repeat(3, minmax(0, 1fr));}
+    .grid-4{grid-template-columns: repeat(4, minmax(0, 1fr));}
+
     @media (max-width: 920px){
-      .grid-2,.grid-3{grid-template-columns:1fr;}
+      .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
     }
 
-   .card {
-  margin-bottom: 30px;
-  border: 1px solid #d1d5db;
-  border-radius: 18px;
-  padding: 18px;
-  background: 
-    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-    url("concrete.jpg");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
+    .card{
+      border: 1px solid #d1d5db;
+      border-radius: 18px;
+      padding: 18px;
+      background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url("concrete.jpg");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
     .h2{font-size:1.25rem; margin:0 0 10px;}
     .muted{color:var(--muted)}
+
     .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
     .pill{border:1px solid var(--border); border-radius:999px; padding:8px 10px; font-size:.92rem; background: rgba(255,255,255,.03)}
 
-    /* Images */
     img{max-width:100%; height:auto; display:block;}
     .img{width:100%; border-radius:14px; border:1px solid var(--border); background: rgba(255,255,255,.04); object-fit:cover;}
     .img-missing{filter: grayscale(1); opacity:.85;}
 
-    /* Research Team cards */
+    /* People cards */
     .person{display:flex; gap:14px; align-items:flex-start;}
     .avatar{width:68px; height:68px; border-radius:16px; flex:0 0 auto;}
     .person h3{margin:0 0 2px; font-size:1.02rem;}
     .person p{margin:0; color:var(--muted); font-size:.95rem;}
 
-    /* Footer */
     footer{padding:30px 0 50px; color:var(--muted); font-size:.95rem;}
     .small{font-size:.9rem}
   </style>
@@ -165,20 +154,19 @@
       <div class="hero-card" role="banner" aria-label="Site header">
         <div class="hero-inner">
           <div class="hero-text">
-                        <!-- Centered heading (per your sketch) -->
             <h1 class="site-title">
-  SUSTAINABLE CONSTRUCTION<br>
-  MATERIALS LAB
-</h1>
-            <p class="tagline">Low‑carbon infrastructure materials • Self-healing Asphalt Materials • Self-Sensing Concrete • Bioconcrete</p>
+              SUSTAINABLE CONSTRUCTION<br>
+              MATERIALS LAB
+            </h1>
+            <p class="tagline">Low-carbon infrastructure materials • Self-healing Asphalt Materials • Self-Sensing Concrete • Bioconcrete</p>
           </div>
         </div>
-        <!-- Tabs row (per your sketch) -->
+
         <nav class="tabs" aria-label="Primary">
           <a class="tab" href="#research">Research</a>
-          <a class="tab" href="#Research Team">Research Team</a>
+          <a class="tab" href="#people">Research Team</a>
           <a class="tab" href="#publications">Publications</a>
-          <a class="tab" href="#press">Press</a>
+          <a class="tab" href="#presentations">Presentations</a>
           <a class="tab" href="#gallery">Gallery</a>
           <a class="tab" href="#contact">Contact</a>
         </nav>
@@ -188,158 +176,155 @@
 
   <main class="wrap">
 
-    <section id="research" class="grid grid-2">
-      <div class="card">
-        <h2 class="h2">Research</h2>
-        <p class="muted">In our lab, we develop sustainable and low-carbon infrastructure materials that integrate performance, durability, and intelligent functionality. We engineer biochar-modified cementitious systems by systematically investigating particle size, feedstock type, replacement percentage, and moisture condition to optimize mechanical performance, durability, and carbon reduction potential. We design self-sensing concrete systems for structural health monitoring (SHM), enabling real-time damage detection through piezoresistive behavior. We also explore self-healing and polyurethane-modified asphalt technologies to enhance crack resistance, durability, and lifecycle performance of pavement systems. Across these efforts, we integrate machine learning techniques to optimize mix design, predict material performance, and improve materials testing efficiency, advancing data-driven and climate-resilient infrastructure solutions.</p>
-        <div class="pill-row" aria-label="Research themes">
-          <span class="pill">Low‑carbon cementitious composites</span>
-          <span class="pill">Biochar & waste-derived materials</span>
-          <span class="pill">Self‑sensing / piezoresistive concrete</span>
-          <span class="pill">Durability, transport, and LCA</span>
-        </div>
-      </div>
-      <div class="card">
-        <h2 class="h2">Featured project</h2>
-        <p class="muted">Add a short project highlight with one image.</p>
-        <img class="img" src="assets/featured.jpg" alt="Featured project image" />
-        <p class="small muted" style="margin:10px 0 0;">Tip: put your image at <b>assets/featured.jpg</b> (or change the path).</p>
+    <!-- ✅ Research (Featured removed) -->
+    <section id="research" class="card">
+      <h2 class="h2">Research</h2>
+      <p class="muted">
+        In our lab, we develop sustainable and low-carbon infrastructure materials that integrate performance, durability, and intelligent functionality.
+        We engineer biochar-modified cementitious systems by systematically investigating particle size, feedstock type, replacement percentage, and moisture condition
+        to optimize mechanical performance, durability, and carbon reduction potential. We design self-sensing concrete systems for structural health monitoring (SHM),
+        enabling real-time damage detection through piezoresistive behavior. We also explore self-healing and polyurethane-modified asphalt technologies to enhance crack resistance,
+        durability, and lifecycle performance of pavement systems. Across these efforts, we integrate machine learning techniques to optimize mix design, predict material performance,
+        and improve materials testing efficiency, advancing data-driven and climate-resilient infrastructure solutions.
+      </p>
+
+      <div class="pill-row" aria-label="Research themes">
+        <span class="pill">Low-carbon cementitious composites</span>
+        <span class="pill">Biochar & waste-derived materials</span>
+        <span class="pill">Self-sensing / piezoresistive concrete</span>
+        <span class="pill">Self-healing asphalt & PU modifiers</span>
+        <span class="pill">Machine learning for mix design</span>
       </div>
     </section>
 
-<section id="people" class="card">
-  <h2 class="h2">Research Team</h2>
+    <!-- People -->
+    <section id="people" class="card">
+      <h2 class="h2">Research Team</h2>
 
-  <!-- PI -->
-  <div class="person" style="margin-bottom: 30px;">
-    <img class="img avatar" src="HeadshotShirzad.jpg" alt="Dr. Sharareh Shirzad" />
-    <div>
-      <h3>Lab Director: Dr. Sharareh Shirzad</h3>
-      <p>Assistant Professor & Program Director, Building Science</p>
-      <p class="small">Appalachian State University</p>
-    </div>
-  </div>
-
-  <!-- Current Students -->
-  <h3 style="margin-bottom: 15px;">Current Students</h3>
-
-  <div class="grid grid-2">
-    <div class="card">
-      <div class="person">
-        <img class="img avatar" src="M.jpg" alt="Michael Ayiku" />
+      <div class="person" style="margin-bottom: 30px;">
+        <img class="img avatar" src="HeadshotShirzad.jpg" alt="Dr. Sharareh Shirzad" />
         <div>
-          <h3>Michael Ayiku</h3>
-          <p>M.S. Student</p>
-          <p class="small">
-            Influence of Dry and Saturated Surface Dry Biochar on Concrete Performance and Long-Term Strength Development
-          </p>
+          <h3>Lab Director: Dr. Sharareh Shirzad</h3>
+          <p>Assistant Professor & Program Director, Building Science</p>
+          <p class="small">Appalachian State University</p>
         </div>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="person">
-        <img class="img avatar" src="CJ.jpg" alt="CJ Burns" />
-        <div>
-          <h3> Chris (CJ) Burns</h3>
-          <p>Undergraduate Researcher</p>
-          <p class="small">
-            Optimizing Biochar Fineness for Enhanced Workability and Strength in Cement Mortar
-          </p>
+      <h3 style="margin-bottom: 15px;">Current Students</h3>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="person">
+            <img class="img avatar" src="M.jpg" alt="Michael Ayiku" />
+            <div>
+              <h3>Michael Ayiku</h3>
+              <p>M.S. Student</p>
+              <p class="small">Influence of Dry and Saturated Surface Dry Biochar on Concrete Performance and Long-Term Strength Development</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="person">
+            <img class="img avatar" src="CJ.jpg" alt="CJ Burns" />
+            <div>
+              <h3>Chris (CJ) Burns</h3>
+              <p>Undergraduate Researcher</p>
+              <p class="small">Optimizing Biochar Fineness for Enhanced Workability and Strength in Cement Mortar</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Alumni -->
-  <h3 style="margin-top: 35px; margin-bottom: 10px;">Lab Alumni</h3>
+      <h3 style="margin-top: 35px; margin-bottom: 10px;">Lab Alumni</h3>
+      <ul class="muted" style="padding-left: 20px; line-height: 1.6;">
+        <li>Jonathan Culpepper — M.S. in Sustainable Building Design and Construction</li>
+        <li>Daniel Rose — M.S. in Sustainable Building Design and Construction</li>
+        <li>Hyla Zouzias — M.S. in Technology</li>
+      </ul>
+    </section>
 
-  <ul class="muted" style="padding-left: 20px; line-height: 1.6;">
-    <li>
-      Jonathan Culpepper — M.S. in Sustainable Building Design and Construction
-    </li>
-    <li>
-      Daniel Rose — M.S. in Sustainable Building Design and Construction
-    </li>
-    <li>
-      Hyla Zouzias — M.S. in Technology
-    </li>
-  </ul>
-
-</section>
-
-
+    <!-- Publications -->
     <section id="publications" class="card">
-  <h2 class="h2">Selected Publications</h2>
+      <h2 class="h2">Selected Publications</h2>
 
-  <ul class="muted" style="list-style-type: disc; padding-left: 20px;">
-    
-    <li style="margin-bottom: 22px;">
-      <strong>Shirzad</strong>, S., Mahyari, E., Culpepper, J., and Burns, C. J. (2025).
-      “Biochar–Fly Ash Blended Systems: Experimental Evaluation, Microstructural Characterization, and Predictive Modeling of Strength Development in Sustainable Mortar and Concrete.”
-      <strong>Construction and Building Materials</strong>, Volume 509, 31 January 2026, 145216.
-      — <a href="https://doi.org/10.1016/j.conbuildmat.2026.145216" target="_blank">
-      View Article
-      </a>
-    </li>
+      <ul class="muted" style="list-style-type: disc; padding-left: 20px;">
+        <li style="margin-bottom: 22px;">
+          <strong>Shirzad</strong>, S., Mahyari, E., Culpepper, J., and Burns, C. J. (2025).
+          “Biochar–Fly Ash Blended Systems: Experimental Evaluation, Microstructural Characterization, and Predictive Modeling of Strength Development in Sustainable Mortar and Concrete.”
+          <strong>Construction and Building Materials</strong>, Volume 509, 31 January 2026, 145216.
+          — <a href="https://doi.org/10.1016/j.conbuildmat.2026.145216" target="_blank">View Article</a>
+        </li>
 
-    <li style="margin-bottom: 22px;">
-      Marandi, N., <strong>Shirzad</strong>, S. (2025).
-      “Sustainable Cement and Concrete Technologies: A Review of Materials and Processes for Carbon Reduction.”
-      <strong>Innovative Infrastructure Solutions</strong>, 10:408.
-      — <a href="https://doi.org/10.1007/s41062-025-02213-5" target="_blank">
-      View Article
-      </a>
-    </li>
+        <li style="margin-bottom: 22px;">
+          Marandi, N., <strong>Shirzad</strong>, S. (2025).
+          “Sustainable Cement and Concrete Technologies: A Review of Materials and Processes for Carbon Reduction.”
+          <strong>Innovative Infrastructure Solutions</strong>, 10:408.
+          — <a href="https://doi.org/10.1007/s41062-025-02213-5" target="_blank">View Article</a>
+        </li>
 
-    <li style="margin-bottom: 22px;">
-      Rose, D., <strong>Shirzad</strong>, S. (2024).
-      “Innovations in Green Concrete: Combining Metakaolin and Arundo Grass Biochar for Enhanced Sustainability.”
-      <strong>Sustainability</strong>, 16, 11219.
-      — <a href="https://doi.org/10.3390/su162411219" target="_blank">
-      View Article
-      </a>
-    </li>
+        <li style="margin-bottom: 22px;">
+          Rose, D., <strong>Shirzad</strong>, S. (2024).
+          “Innovations in Green Concrete: Combining Metakaolin and Arundo Grass Biochar for Enhanced Sustainability.”
+          <strong>Sustainability</strong>, 16, 11219.
+          — <a href="https://doi.org/10.3390/su162411219" target="_blank">View Article</a>
+        </li>
 
-    <li style="margin-bottom: 22px;">
-      <strong>Shirzad</strong>, S., Zouzias, H. (2024).
-      “Enhancing the Performance of Wood-Based Bio-Asphalt: Strategies and Innovations.”
-      <strong>Clean Technologies and Environmental Policy</strong>.
-      — <a href="https://doi.org/10.1007/s10098-024-02745-x" target="_blank">
-      View Article
-      </a>
-    </li>
+        <li style="margin-bottom: 22px;">
+          <strong>Shirzad</strong>, S., Zouzias, H. (2024).
+          “Enhancing the Performance of Wood-Based Bio-Asphalt: Strategies and Innovations.”
+          <strong>Clean Technologies and Environmental Policy</strong>.
+          — <a href="https://doi.org/10.1007/s10098-024-02745-x" target="_blank">View Article</a>
+        </li>
 
-    <li style="margin-bottom: 22px;">
-      <strong>Shirzad</strong>, S., Idris, I. I., Hassan, M. M., and Mohammad, L. N. (2023).
-      “Self-Healing Capability and Mechanical Properties of Asphalt Mixtures Prepared with Light-Activated Polyurethane Prepolymer Modified Asphalt Binder.”
-      <strong>Transportation Research Record</strong>.
-      — <a href="https://doi.org/10.1177/03611981221138522" target="_blank">
-      View Article
-      </a>
-    </li>
+        <li style="margin-bottom: 22px;">
+          <strong>Shirzad</strong>, S., Idris, I. I., Hassan, M. M., and Mohammad, L. N. (2023).
+          “Self-Healing Capability and Mechanical Properties of Asphalt Mixtures Prepared with Light-Activated Polyurethane Prepolymer Modified Asphalt Binder.”
+          <strong>Transportation Research Record</strong>.
+          — <a href="https://doi.org/10.1177/03611981221138522" target="_blank">View Article</a>
+        </li>
+      </ul>
+    </section>
 
-  </ul>
-</section>
+    <!-- ✅ Recent Presentations (4 image spots) -->
+    <section id="presentations" class="card">
+      <h2 class="h2">Recent Presentations</h2>
+      <p class="muted">Replace these four images with your presentation screenshots or title slides.</p>
 
+      <div class="grid grid-2" style="margin-top:12px;">
+        <img class="img" src="presentation1.jpg" alt="Presentation 1" />
+        <img class="img" src="presentation2.jpg" alt="Presentation 2" />
+        <img class="img" src="presentation3.jpg" alt="Presentation 3" />
+        <img class="img" src="presentation4.jpg" alt="Presentation 4" />
+      </div>
 
-  <h2 class="h2">Gallery</h2>
+      <p class="small muted" style="margin:10px 0 0;">
+        Tip: upload files named <b>presentation1.jpg</b> … <b>presentation4.jpg</b> to your repo (same folder as index.html), or change the filenames above.
+      </p>
+    </section>
 
-  <div class="grid grid-3" style="margin-top:12px;">
-    <img class="img" src="Milledbiochar.JPG" alt="Milled biochar" />
-    <img class="img" src="BCFACube.JPG" alt="BCFA cube" />
-    <img class="img" src="Cubes.jpg" alt="Cubes" />
-  </div>
-</section>
+    <!-- ✅ Fixed Gallery section -->
+    <section id="gallery" class="card">
+      <h2 class="h2">Gallery</h2>
 
+      <div class="grid grid-3" style="margin-top:12px;">
+        <img class="img" src="Milledbiochar.JPG" alt="Milled biochar" />
+        <img class="img" src="BCFACube.JPG" alt="BCFA cube" />
+        <img class="img" src="Cubes.jpg" alt="Cubes" />
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="card">
       <h2 class="h2">Contact</h2>
-      <p class="muted">Email: <a href="mailto:shirzads@appstate.edu">shirzads@appstate.edu</a><br />
-      Sharareh Shirzad <br />
-      Sustainable Technology and the Built Environment <br />
-      Appalachian State University <br />
-      Katherine Harper Hall <br />
-      Boone, NC</p>
+      <p class="muted">
+        Email: <a href="mailto:shirzads@appstate.edu">shirzads@appstate.edu</a><br />
+        Sharareh Shirzad <br />
+        Sustainable Technology and the Built Environment <br />
+        Appalachian State University <br />
+        Katherine Harper Hall <br />
+        Boone, NC
+      </p>
     </section>
 
     <footer>
@@ -348,15 +333,14 @@
   </main>
 
   <script>
-    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Auto-fallback for broken images so the layout doesn’t collapse.
-    // Put a placeholder at: assets/placeholder.jpg
+    // Optional: if an image path is wrong, this prevents broken layout.
+    // Upload a file named placeholder.jpg (in the same folder as index.html) if you want this.
     document.addEventListener('error', function (e) {
       const el = e.target;
       if (el && el.tagName === 'IMG') {
-        const placeholder = 'assets/placeholder.jpg';
+        const placeholder = 'placeholder.jpg';
         if (!el.dataset.fallbackApplied) {
           el.dataset.fallbackApplied = '1';
           el.classList.add('img-missing');
@@ -365,7 +349,6 @@
         }
       }
     }, true);
-
   </script>
 </body>
 </html>
